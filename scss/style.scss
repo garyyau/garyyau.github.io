@@ -1,0 +1,40 @@
+@import '../node_modules/muicss/lib/sass/mui/colors';
+
+// Customize MUI variables
+$mui-primary-color: mui-color('pink', '500');
+$mui-primary-color-dark: mui-color('pink', '700');
+$mui-primary-color-light: mui-color('pink', '100');
+
+$mui-accent-color: mui-color('deep-purple', 'A200');
+$mui-accent-color-dark: mui-color('deep-purple', 'A100');
+$mui-accent-color-light:  mui-color('deep-purple', 'A400');
+
+@import '../node_modules/muicss/lib/sass/mui';
+
+
+.side-content {
+	@extend .mui-col-md-4;
+
+	background-color: red;
+}
+.main-content {
+	@extend .mui-col-md-8;
+
+	background-color: yellow;
+}
+
+$profile-pic-px: 180px;
+.profile-photo-container {
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+	width: $profile-pic-px;
+	height: $profile-pic-px;
+	border-radius: 50%;
+
+	img {
+		display: inline;
+		width: auto;
+		height: 100%;
+	}
+}
