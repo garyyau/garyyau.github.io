@@ -9,6 +9,7 @@
   "author": "Gary Yau <gyau88@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "angular": "^1.5.0",
     "muicss": "^0.4.7"
   },
   "devDependencies": {

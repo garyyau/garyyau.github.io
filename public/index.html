@@ -5,25 +5,57 @@
 	<title>Resume Template</title>
 	
 	<script type="text/javascript" src="js/libs.js"></script>
+	<script type="text/javascript" src="js/bundle.js"></script>
 
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	
-	<div class="mui-container">
-		<div class="mui-row">
+	<div class="mui-container" ng-controller="LayoutController">
+		<div class="content-container mui-row">
 			<div class="side-content">
 				<div class="profile-photo-container">
 					<img src="http://www.electricvelocity.com.au/Upload/Blogs/smart-e-bike-side_2.jpg" class="rounded" />
+				</div>
+
+				<div class="general-container">
+					<div class="name">
+						<span class="first-name" ng-if="data.firstName">{{ data.firstName }}</span>
+						<span class="last-name" ng-if="data.lastName">{{ data.lastName }}</span>
+					</div>
+					<div class="occupation" ng-if="data.occupation">{{ data.occupation }}</div>
+				</div>
+
+				<div class="contact-container">
+					<div>
+						<span class="label">T</span>
+						<span>{{ data.contact.phone }}</span>
+					</div>
+					<div>
+						<span class="label">E</span>
+						<span>{{ data.contact.email }}</span>
+					</div>
+				</div>
+
+				<div class="side-info-section">
+					<div class="header">Overview</div>
+					<div class="subheader">Whatisthis</div>
+					<div class="content">{{ data.overview }}</div>
+				</div>
+
+				<div class="side-info-section">
+					<div class="header">Overview</div>
+					<div class="subheader">Professional Skills</div>
+					<div class="content">{{ data.overview }}</div>
+
+					<div class="subheader">Personal Skills</div>
+					<div class="content">{{ data.overview }}</div>
 				</div>
 			
 			</div>
 
 			<div class="main-content">
-				<h1>Current Work Experience</h1>
-				<p><b>Pleasure Ensurer</b> - Gabby's Body Incorporation (Current)</p>
-				<p><b>Job Description:</b></p>
-				<p>To provide pleasure to clients and boss, ensuring that in the dry weather of Australia, they are able to feel what they need to inorder to get wet, and get off.</p>
+				Boo. Insert informatino here.
 			</div>
 		</div>
 	</div>

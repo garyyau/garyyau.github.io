@@ -1,33 +1,45 @@
-@import '../node_modules/muicss/lib/sass/mui/colors';
+@charset 'UTF-8';
+@import '_fonts';
+@import '_colors';
 
-// Customize MUI variables
-$mui-primary-color: mui-color('pink', '500');
-$mui-primary-color-dark: mui-color('pink', '700');
-$mui-primary-color-light: mui-color('pink', '100');
+html, body {
+	@extend .mui--text-body1;
 
-$mui-accent-color: mui-color('deep-purple', 'A200');
-$mui-accent-color-dark: mui-color('deep-purple', 'A100');
-$mui-accent-color-light:  mui-color('deep-purple', 'A400');
+	font-family: 'Roboto', sans-serif;
+}
 
-@import '../node_modules/muicss/lib/sass/mui';
-
-
+/* General Layout */
+$outer-padding-vertical: 70px;
+$outer-padding-horizontal: 25px;
+$section-margin: 30px;
+.content-container {
+	@extend.mui--z2;
+}
 .side-content {
 	@extend .mui-col-md-4;
 
-	background-color: red;
+	padding: $outer-padding-vertical $outer-padding-horizontal;
+	background-color: $mui-primary-color;
 }
 .main-content {
 	@extend .mui-col-md-8;
 
-	background-color: yellow;
+	padding: $outer-padding-vertical $outer-padding-horizontal;
+	background-color: mui-color('grey', '100');
 }
 
-$profile-pic-px: 180px;
+/* Side Content */
 .profile-photo-container {
+	$profile-pic-px: 150px;
+
+	@extend .mui--z2;
+
 	position: relative;
 	overflow: hidden;
-	margin: 0 auto;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: $section-margin;
+	margin-left: auto; 
 	width: $profile-pic-px;
 	height: $profile-pic-px;
 	border-radius: 50%;
@@ -36,5 +48,60 @@ $profile-pic-px: 180px;
 		display: inline;
 		width: auto;
 		height: 100%;
+	}
+}
+.general-container {
+	margin-bottom: $section-margin;
+	text-align: center;
+
+	.name {
+		@extend .mui--text-display1;
+
+		text-transform: uppercase;
+
+		.last-name {
+			font-weight: bold;
+		}
+	}
+	.occupation {
+		margin: 5px 0;
+		color: mui-color('grey', '100');
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+.contact-container {
+	margin: 0 20px;
+	margin-top: 0;
+	margin-right: 20px;
+	margin-bottom: $section-margin;
+	margin-left: 20px;
+	line-height: 28px;
+
+	.label {
+		margin-right: 25px;
+		font-weight: bold;
+	}
+}
+.side-info-section {
+	margin-bottom: $section-margin / 2;
+
+	.header {
+		@extend .mui--text-headline;
+
+		margin-bottom: 3px;
+		text-transform: uppercase;
+	}
+	.subheader {
+		@extend .mui--text-subheader;
+
+		margin-bottom: 10px;
+		color: mui-color('grey', '100');
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-weight: bold;
+	}
+	.content {
+
 	}
 }

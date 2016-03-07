@@ -22,9 +22,6 @@ class BundleScriptsTask {
 		var args = watchify.args;
 		var config = _.assign({}, watchify.args, {
 			entries: [paths.source.js + '/app.js'],
-			transform: [['babelify', {
-				presets: ['es2015', 'react'],
-			}]],
 			debug: true,
 			bundleExternal: false,
 		});
