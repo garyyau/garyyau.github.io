@@ -1,0 +1,45 @@
+{
+	"firstName": "Kirigaya",
+	"lastName": "Kazuto",
+	"occupation": "The Black Swordsman",
+	"contact": {
+		"phone": "+1 (123) 456 7890",
+		"email": "kkazuto@sao.com",
+	},
+	"overview": "Kirito is also a very emotional person and lets his emotions control him from time to time. The deaths of Sachi and Moonlit Black Cats had haunted him until his marriage with Asuna in Sword Art Online. Sachi's death in particular had a huge effect on his personality and motives, making him very distant from others for a while. This worries his friends and allies as Kirito is someone who would let guilt ruin his life if not comforted. Kirito temporarily loses his will to live when Asuna's character was killed by Heathcliff. He also tries to hide his abilities, not wanting unneeded attention.",
+	"skills": {
+		"professional": [
+			{
+				"name": "Dual-Wielding",
+				"progress": 100,
+			},
+			{
+				"name": "Dueling",
+				"progress": 86,
+			},
+			{
+				"name": "Gunsmanship",
+				"progress": 50,
+			},
+			{
+				"name": "Flying",
+				"progress": 65,
+			}
+		],
+		"personal": [
+			{
+				"name": "Independence",
+				"progress": 100,
+			},
+			{
+				"name": "Teamwork",
+				"progress": 75,
+			},
+			{
+				"name": "Communication",
+				"progress": 30,
+			}
+		]
+	}
+
+}
