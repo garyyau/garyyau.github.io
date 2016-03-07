@@ -38,24 +38,55 @@
 				</div>
 
 				<div class="side-info-section">
-					<div class="header">Overview</div>
-					<div class="subheader">Whatisthis</div>
+					<div class="header">
+						<div class="label">Overview</div>
+					</div>
 					<div class="content">{{ data.overview }}</div>
 				</div>
 
 				<div class="side-info-section">
-					<div class="header">Overview</div>
+					<div class="header">
+						<div class="label">Skills</div>
+					</div>
 					<div class="subheader">Professional Skills</div>
-					<div class="content">{{ data.overview }}</div>
+					<div class="content">
+						<div class="skill-sets-container">
+							<div class="skill-set"
+								 ng-repeat="skill in data.skills.professional | orderBy:'-progress'"
+							>
+								<div class="name">{{ skill.name }}</div>
+								<div class="progress">
+									<div class="progress-bar"
+										 ng-style="{'width': skill.progress + '%'}"
+									>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 					<div class="subheader">Personal Skills</div>
-					<div class="content">{{ data.overview }}</div>
+					<div class="content">
+						<div class="skill-sets-container">
+							<div class="skill-set"
+								 ng-repeat="skill in data.skills.personal | orderBy:'-progress'"
+							>
+								<div class="name">{{ skill.name }}</div>
+								<div class="progress">
+									<div class="progress-bar"
+										 ng-style="{'width': skill.progress + '%'}"
+									>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			
 			</div>
 
 			<div class="main-content">
-				Boo. Insert informatino here.
+				Boo. Insert information here.
 			</div>
 		</div>
 	</div>

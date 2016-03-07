@@ -14,18 +14,21 @@ $outer-padding-horizontal: 25px;
 $section-margin: 30px;
 .content-container {
 	@extend.mui--z2;
+
+	display: flex;
+	align-items: stretch;
 }
 .side-content {
 	@extend .mui-col-md-4;
 
 	padding: $outer-padding-vertical $outer-padding-horizontal;
-	background-color: $mui-primary-color;
+	background-color: $sidebar-bg-color;
 }
 .main-content {
 	@extend .mui-col-md-8;
 
 	padding: $outer-padding-vertical $outer-padding-horizontal;
-	background-color: mui-color('grey', '100');
+	background-color: $content-bg-color;
 }
 
 /* Side Content */
@@ -64,8 +67,9 @@ $section-margin: 30px;
 		}
 	}
 	.occupation {
+		@extend .mui--text-light;
+
 		margin: 5px 0;
-		color: mui-color('grey', '100');
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -89,19 +93,58 @@ $section-margin: 30px;
 	.header {
 		@extend .mui--text-headline;
 
+		position: relative;
 		margin-bottom: 3px;
-		text-transform: uppercase;
+
+		.label {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+			padding-right: 10px;
+			background-color: $mui-primary-color;
+			text-transform: uppercase;
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			display: block;
+			width: 100%;
+			border-top: 1px solid $mui-text-dark;
+			content: " ";
+		}
 	}
 	.subheader {
 		@extend .mui--text-subheader;
+		@extend .mui--text-light;
 
 		margin-bottom: 10px;
-		color: mui-color('grey', '100');
 		text-transform: uppercase;
 		letter-spacing: 3px;
 		font-weight: bold;
 	}
 	.content {
 
+	}
+}
+.skill-sets-container {
+	margin-bottom: 20px;
+}
+.skill-set {
+	$progress-bar-height: 15px;
+
+	margin-bottom: 5px;
+
+	.name {
+		
+	}
+	.progress {
+		width: 100%;
+		height: $progress-bar-height;
+		background-color: $mui-accent-color-light;
+
+		.progress-bar {
+			height: 100%;
+			background-color: $mui-accent-color-dark;
+		}
 	}
 }
