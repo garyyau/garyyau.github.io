@@ -91,6 +91,7 @@ $section-margin: 30px;
 
 	.header .label {
 		background-color: $mui-primary-color;
+		color: $mui-text-dark;
 	}
 }
 .skill-sets-container {
@@ -114,6 +115,10 @@ $section-margin: 30px;
 			background-color: $mui-accent-color-dark;
 		}
 	}
+}
+.main-info-section {
+	margin-bottom: $section-margin;
+	width: 100%;
 }
 .technical-profiles-container {
 	margin-top: $section-margin / 2;
@@ -139,18 +144,35 @@ $section-margin: 30px;
 
 /* Shared Components */
 .header {
+	$header-icon-px: 35px;
+
 	@extend .mui--text-headline;
 
 	position: relative;
 	margin-bottom: 3px;
 
+	.icon {
+		display: inline-block;
+		width: $header-icon-px;
+		height: $header-icon-px;
+		border-radius: 50%;
+		background-color: $sidebar-bg-color;
+		text-align: center;
+
+		.fa {
+			color: $mui-text-light;
+			font-size: 20px;
+		}
+	}
 	.label {
 		position: relative;
 		z-index: 1;
 		display: inline-block;
 		padding-right: 10px;
 		background-color: $content-bg-color;
+		color: $sidebar-bg-color;
 		text-transform: uppercase;
+		line-height: $header-icon-px;
 	}
 	&:after {
 		position: absolute;

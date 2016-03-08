@@ -7,6 +7,7 @@
 	<script type="text/javascript" src="js/libs.js"></script>
 	<script type="text/javascript" src="js/bundle.js"></script>
 
+	<link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -88,7 +89,12 @@
 			<div class="main-content">
 				<div class="main-info-section">
 					<div class="header">
-						<div class="label">Technical Profile</div>
+						<div class="label">
+							<div class="icon">
+								<i class="fa fa-wrench"></i>
+							</div>
+							<span>Technical Profile</span>
+						</div>
 					</div>
 					<div class="technical-profiles-container">
 						<div class="technical-profile"
@@ -102,7 +108,31 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="main-info-section">
+					<div class="header">
+						<div class="label">
+							<div class="icon">
+								<i class="fa fa-briefcase"></i>
+							</div>
+							<span>Work Experience</span>
+						</div>
+					</div>
+					<div class="technical-profiles-container">
+						<div class="technical-profile"
+							 ng-repeat="profile in data.technicalProfile"
+						>
+							<div class="name">{{ profile.name }}</div>
+							<div class="element"
+								 ng-bind="getProfileElementsDisplay(profile)"
+							></div>
+
+						</div>
+					</div>
+				</div>
+
 			</div>
+			
 		</div>
 	</div>
 
