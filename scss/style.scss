@@ -120,14 +120,17 @@ $section-margin: 30px;
 	margin-bottom: $section-margin;
 	width: 100%;
 }
-.technical-profiles-container {
+.technical-profiles-container,
+.experiences-container {
 	margin-top: $section-margin / 2;
 }
-.technical-profile {
+.technical-profile,
+.experience {
 	margin: 0 auto;
 	padding: 3px 0;
 	width: 96%;
-
+}
+.technical-profile {
 	.name {
 		display: inline-block;
 		width: 17.5%;
@@ -139,6 +142,23 @@ $section-margin: 30px;
 	}
 	&:not(:first-child) {
 		border-top: 1px solid black;
+	}
+}
+.experience {
+	.position,
+	.location,
+	.time {
+		display: inline-block;
+	}
+	.position {
+		margin-right: 15px;
+		font-weight: bold;
+	}
+	.time {
+		float: right;
+	}
+	.description {
+		margin: 10px 0;
 	}
 }
 

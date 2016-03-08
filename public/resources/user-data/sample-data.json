@@ -73,5 +73,20 @@
 				"Bootstrap",
 			],
 		},
+	],
+	"workExperience":
+	[
+		{
+			"position": "Junior Software Developer",
+			"location": "DHX Studios in Vancouver, BC",
+			"time": "March 2014 - Current",
+			"description": "Vestibulum pulvinar id odio nec iaculis. Suspendisse sed purus lobortis, porttitor ipsum eu, imperdiet tortor. Suspendisse egestas maximus leo. Nulla volutpat a diam ut tempus. Fusce eget lectus ultrices tellus facilisis finibus. Nunc non dui vel sapien pellentesque hendrerit finibus in dui. In leo metus, elementum hendrerit ultrices ac, hendrerit sed augue. In hac habitasse platea dictumst. Maecenas dui quam, viverra vitae nisi vitae, faucibus laoreet massa. Phasellus sed congue dui, nec venenatis dolor. Donec feugiat ullamcorper mi et feugiat. Curabitur ultricies vel erat quis congue. Curabitur ultrices dui vitae eros porta commodo.",
+		},
+		{
+			"position": "Junior Software Developer",
+			"location": "DHX Studios in Vancouver, BC",
+			"time": "March 2014 - Current",
+			"description": "Vestibulum pulvinar id odio nec iaculis. Suspendisse sed purus lobortis, porttitor ipsum eu, imperdiet tortor. Suspendisse egestas maximus leo. Nulla volutpat a diam ut tempus. Fusce eget lectus ultrices tellus facilisis finibus. Nunc non dui vel sapien pellentesque hendrerit finibus in dui. In leo metus, elementum hendrerit ultrices ac, hendrerit sed augue. In hac habitasse platea dictumst. Maecenas dui quam, viverra vitae nisi vitae, faucibus laoreet massa. Phasellus sed congue dui, nec venenatis dolor. Donec feugiat ullamcorper mi et feugiat. Curabitur ultricies vel erat quis congue. Curabitur ultrices dui vitae eros porta commodo.",
+		},
 	]
 }

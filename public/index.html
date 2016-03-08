@@ -118,15 +118,14 @@
 							<span>Work Experience</span>
 						</div>
 					</div>
-					<div class="technical-profiles-container">
-						<div class="technical-profile"
-							 ng-repeat="profile in data.technicalProfile"
+					<div class="experiences-container">
+						<div class="experience"
+							 ng-repeat="experience in data.workExperience"
 						>
-							<div class="name">{{ profile.name }}</div>
-							<div class="element"
-								 ng-bind="getProfileElementsDisplay(profile)"
-							></div>
-
+							<div class="position">{{ experience.position }}</div>
+							<div class="location">{{ experience.location }}</div>
+							<div class="time">{{ experience.time }}</div>
+							<div class="description">{{ experience.description }}</div>
 						</div>
 					</div>
 				</div>
