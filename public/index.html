@@ -15,7 +15,7 @@
 		<div class="content-container mui-row">
 			<div class="side-content">
 				<div class="profile-photo-container">
-					<img src="http://www.electricvelocity.com.au/Upload/Blogs/smart-e-bike-side_2.jpg" class="rounded" />
+					<img ng-src="{{data.profileImage}}" class="rounded" />
 				</div>
 
 				<div class="general-container">
@@ -86,7 +86,22 @@
 			</div>
 
 			<div class="main-content">
+				<div class="main-info-section">
+					<div class="header">
+						<div class="label">Technical Profile</div>
+					</div>
+					<div class="technical-profiles-container">
+						<div class="technical-profile"
+							 ng-repeat="profile in data.technicalProfile"
+						>
+							<div class="name">{{ profile.name }}</div>
+							<div class="element"
+								 ng-bind="getProfileElementsDisplay(profile)"
+							></div>
 
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

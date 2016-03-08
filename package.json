@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.5.0",
+    "lodash": "^4.6.1",
     "muicss": "^0.4.7"
   },
   "devDependencies": {

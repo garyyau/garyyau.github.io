@@ -1,4 +1,5 @@
 {
+	"profileImage": "http://static.zerochan.net/Kirito.(ALO).full.1805051.jpg",
 	"firstName": "Kirigaya",
 	"lastName": "Kazuto",
 	"occupation": "The Black Swordsman",
@@ -40,6 +41,37 @@
 				"progress": 30,
 			}
 		]
-	}
-
+	},
+	"technicalProfile":
+	[
+		{
+			"name": "Languages",
+			"items": 
+			[
+				"PHP",
+				"Python",
+				"Perl",
+				"JavaScript",
+				"HTML5",
+				"SCSS",
+				"CSS3",
+				"XML",
+				"SQL",
+				"C++",
+				"Java",
+			],
+		},
+		{
+			"name": "Frameworks",
+			"items": 
+			[
+				"Django",
+				"Laravel",
+				"AngularJS",
+				"Knockout",
+				"jQuery",
+				"Bootstrap",
+			],
+		},
+	]
 }

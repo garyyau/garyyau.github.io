@@ -49,8 +49,7 @@ $section-margin: 30px;
 
 	img {
 		display: inline;
-		width: auto;
-		height: 100%;
+		width: 100%;
 	}
 }
 .general-container {
@@ -90,40 +89,8 @@ $section-margin: 30px;
 .side-info-section {
 	margin-bottom: $section-margin / 2;
 
-	.header {
-		@extend .mui--text-headline;
-
-		position: relative;
-		margin-bottom: 3px;
-
-		.label {
-			position: relative;
-			z-index: 1;
-			display: inline-block;
-			padding-right: 10px;
-			background-color: $mui-primary-color;
-			text-transform: uppercase;
-		}
-		&:after {
-			position: absolute;
-			top: 50%;
-			display: block;
-			width: 100%;
-			border-top: 1px solid $mui-text-dark;
-			content: " ";
-		}
-	}
-	.subheader {
-		@extend .mui--text-subheader;
-		@extend .mui--text-light;
-
-		margin-bottom: 10px;
-		text-transform: uppercase;
-		letter-spacing: 3px;
-		font-weight: bold;
-	}
-	.content {
-
+	.header .label {
+		background-color: $mui-primary-color;
 	}
 }
 .skill-sets-container {
@@ -135,7 +102,7 @@ $section-margin: 30px;
 	margin-bottom: 5px;
 
 	.name {
-		
+
 	}
 	.progress {
 		width: 100%;
@@ -147,4 +114,59 @@ $section-margin: 30px;
 			background-color: $mui-accent-color-dark;
 		}
 	}
+}
+.technical-profiles-container {
+	margin-top: $section-margin / 2;
+}
+.technical-profile {
+	margin: 0 auto;
+	padding: 3px 0;
+	width: 96%;
+
+	.name {
+		display: inline-block;
+		width: 17.5%;
+		font-weight: bold;
+	}
+	.element {
+		display: inline-block;
+		width: 82%;
+	}
+	&:not(:first-child) {
+		border-top: 1px solid black;
+	}
+}
+
+/* Shared Components */
+.header {
+	@extend .mui--text-headline;
+
+	position: relative;
+	margin-bottom: 3px;
+
+	.label {
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		padding-right: 10px;
+		background-color: $content-bg-color;
+		text-transform: uppercase;
+	}
+	&:after {
+		position: absolute;
+		top: 50%;
+		display: block;
+		width: 100%;
+		border-top: 1px solid $mui-text-dark;
+		content: " ";
+	}
+}
+.subheader {
+	@extend .mui--text-subheader;
+	@extend .mui--text-light;
+
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-weight: bold;
 }
