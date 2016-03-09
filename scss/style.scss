@@ -137,6 +137,9 @@ $section-margin: 30px;
 	.description {
 		margin: 10px 0;
 	}
+	&:last-child {
+		padding-bottom: 0px;
+	}
 }
 .technical-profile-section {
 	.name {
@@ -166,7 +169,7 @@ $section-margin: 30px;
 	}
 }
 .education-section {
-	.program, .time {
+	.name, .time {
 		display: inline-block;
 	}
 	.time {
@@ -224,20 +227,4 @@ $section-margin: 30px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: bold;
-}
-
-/* Print Style */
-@media print {
-	.mui-container {
-		max-width: none;
-		width: 100%;
-	}
-	.side-content {
-		padding: 30pt;
-		width: 34%;
-	}
-	.main-content {
-		padding: 30pt;
-		width: 66%;
-	}
 }
