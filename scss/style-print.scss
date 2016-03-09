@@ -1,0 +1,117 @@
+@charset 'UTF-8';
+@import '_fonts';
+@import '_colors';
+
+
+@media print {
+	$print-section-margin: 15pt;
+
+	html, body {
+		font-size: 10pt;
+		line-height: 12pt;
+	}
+	.mui-container {
+		max-width: none;
+		width: 100%;
+	}
+	.content-container {
+		margin-top: 0;
+		margin-bottom: 0;
+		box-shadow: none;
+	}
+	.side-content {
+		padding: 20pt 20pt;
+		width: 35%;
+	}
+	.main-content {
+		padding: 20pt 20pt 30pt 15pt;
+		width: 65%;
+	}
+	.profile-photo-container {
+		margin-bottom: $print-section-margin;
+		box-shadow: none;
+	}
+	.general-container {
+		margin-bottom: $print-section-margin;
+
+		.name {
+			font-size: 16pt;
+			line-height: 20pt;
+		}
+		.occupation {
+			margin: 0;
+			font-size: 9pt;
+		}
+	}
+	.contact-container {
+		margin-bottom: $print-section-margin;
+		line-height: 15pt;
+	}
+	.side-info-section {
+		margin-bottom: $print-section-margin / 2;
+	}
+	.skill-sets-container {
+		margin-bottom: 10pt;
+	}
+	.skill-set {
+		$print-progress-bar-height: 9pt;
+
+		.name {
+			font-size: 9pt;
+		}
+		.progress {
+			height: $print-progress-bar-height;
+		}
+	}
+	.main-info-section {
+		margin-bottom: $print-section-margin / 2;
+	}
+	.section-container {
+		margin-top: $print-section-margin / 4;
+	}
+	.section {
+		padding: 3pt;
+	}
+	.technical-profile-section {
+		.name {
+			width: 20%;
+		}
+		.element {
+			width: 80%;
+			line-height: 16pt;
+		}
+	}
+	.experience-section {
+		.position, .time {
+			display: inline-block;
+		}
+		.position {
+			line-height: 16pt;
+		}
+		.location {
+			display: block;
+		}
+	}
+	.header {
+		$print-header-icon-px: 18pt;
+
+		margin-bottom: 0;
+		font-size: 15pt;
+
+		.icon {
+			width: $print-header-icon-px;
+			height: $print-header-icon-px;
+
+			.zmdi {
+				font-size: 12pt;
+			}
+		}
+		.label {
+			line-height: $print-header-icon-px;
+		}
+	}
+	.subheader {
+		letter-spacing: 1pt;
+		font-size: 9pt;
+	}
+}
