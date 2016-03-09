@@ -28,6 +28,7 @@ buildSASSTask.createTasks();
 
 /* Watch Task */
 gulp.task('watch', [
+	'default',
 	initBrowserSyncTask.name,
 	bundleScriptsTask.watchName,
 	buildHTMLTask.watchName,

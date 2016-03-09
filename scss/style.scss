@@ -23,6 +23,7 @@ $section-margin: 30px;
 
 	padding: $outer-padding-vertical $outer-padding-horizontal;
 	background-color: $sidebar-bg-color;
+	color: $mui-text-light;
 }
 .main-content {
 	@extend .mui-col-md-8;
@@ -66,15 +67,13 @@ $section-margin: 30px;
 		}
 	}
 	.occupation {
-		@extend .mui--text-light;
-
 		margin: 5px 0;
+		color: $mui-text-light-secondary;
 		text-align: center;
 		text-transform: uppercase;
 	}
 }
 .contact-container {
-	margin: 0 20px;
 	margin-top: 0;
 	margin-right: 20px;
 	margin-bottom: $section-margin;
@@ -89,9 +88,14 @@ $section-margin: 30px;
 .side-info-section {
 	margin-bottom: $section-margin / 2;
 
-	.header .label {
-		background-color: $mui-primary-color;
-		color: $mui-text-dark;
+	.header {
+		.label {
+			background-color: $mui-primary-color;
+			color: $mui-text-light;
+		}
+		&:after {
+			border-color: $mui-text-light;
+		}
 	}
 }
 .skill-sets-container {
@@ -102,17 +106,14 @@ $section-margin: 30px;
 
 	margin-bottom: 5px;
 
-	.name {
-
-	}
 	.progress {
 		width: 100%;
 		height: $progress-bar-height;
-		background-color: $mui-accent-color-light;
+		background-color: $mui-primary-accent-color-light;
 
 		.progress-bar {
 			height: 100%;
-			background-color: $mui-accent-color-dark;
+			background-color: $mui-primary-accent-color-dark;
 		}
 	}
 }
@@ -120,34 +121,38 @@ $section-margin: 30px;
 	margin-bottom: $section-margin;
 	width: 100%;
 }
-.technical-profiles-container,
-.experiences-container {
+.section-container {
 	margin-top: $section-margin / 2;
 }
-.technical-profile,
-.experience {
+.section {
 	margin: 0 auto;
 	padding: 3px 0;
 	width: 96%;
-}
-.technical-profile {
+
 	.name {
-		display: inline-block;
-		width: 17.5%;
 		font-weight: bold;
 	}
+	.description {
+		margin: 10px 0;
+	}
+}
+.technical-profile-section {
+	.name {
+		display: block;
+		float: left;
+		width: 17.5%;
+	}
 	.element {
-		display: inline-block;
+		display: block;
+		float: left;
 		width: 82%;
 	}
 	&:not(:first-child) {
 		border-top: 1px solid black;
 	}
 }
-.experience {
-	.position,
-	.location,
-	.time {
+.experience-section {
+	.position, .location, .time {
 		display: inline-block;
 	}
 	.position {
@@ -157,8 +162,18 @@ $section-margin: 30px;
 	.time {
 		float: right;
 	}
-	.description {
-		margin: 10px 0;
+}
+.education-section {
+	.program, .time {
+		display: inline-block;
+	}
+	.time {
+		float: right;
+	}
+}
+.project-section {
+	.role {
+		margin-top: 10px;
 	}
 }
 
@@ -177,12 +192,8 @@ $section-margin: 30px;
 		height: $header-icon-px;
 		border-radius: 50%;
 		background-color: $sidebar-bg-color;
+		color: $mui-text-light;
 		text-align: center;
-
-		.fa {
-			color: $mui-text-light;
-			font-size: 20px;
-		}
 	}
 	.label {
 		position: relative;
@@ -199,16 +210,32 @@ $section-margin: 30px;
 		top: 50%;
 		display: block;
 		width: 100%;
-		border-top: 1px solid $mui-text-dark;
+		border-top: 1px solid $sidebar-bg-color;
 		content: " ";
 	}
 }
 .subheader {
 	@extend .mui--text-subheader;
-	@extend .mui--text-light;
 
 	margin-bottom: 10px;
+	color: $mui-text-light-secondary;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-weight: bold;
+}
+
+/* Print Style */
+@media print {
+	.mui-container {
+		max-width: none;
+		width: 100%;
+	}
+	.side-content {
+		padding: 30pt;
+		width: 34%;
+	}
+	.main-content {
+		padding: 30pt;
+		width: 66%;
+	}
 }
