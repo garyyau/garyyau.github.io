@@ -1,10 +1,10 @@
 @import '../node_modules/muicss/lib/sass/mui/colors';
 
 // Customize MUI variables
-$primary-color: 'teal';
+$primary-color: 'light-blue';
 $accent-color: 'amber';
 
-$mui-primary-color: mui-color($primary-color, '500');
+$mui-primary-color: mui-color($primary-color, '900');
 $mui-primary-color-dark: mui-color($primary-color, '700');
 $mui-primary-color-light: mui-color($primary-color, '100');
 $mui-primary-accent-color-dark: mui-color($primary-color, 'A400');

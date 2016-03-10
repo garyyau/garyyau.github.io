@@ -17,52 +17,57 @@
 		<div class="content-container mui-row">
 			<div class="side-content">
 
-				<div class="profile-photo-container">
-					<img ng-src="{{data.profileImage}}" class="rounded" />
+				<div class="side-content-top">
+					<div class="profile-photo-container">
+						<img ng-src="{{data.profileImage}}" class="rounded" />
+					</div>
+
+					<div class="general-container">
+						<div class="name">
+							<span class="first-name" ng-if="data.firstName">{{ data.firstName }}</span>
+							<span class="last-name" ng-if="data.lastName">{{ data.lastName }}</span>
+						</div>
+						<div class="occupation" ng-if="data.occupation">{{ data.occupation }}</div>
+					</div>
+
+					<div class="contact-container">
+						<div class="header">Contact</div>
+						<div>
+							<span class="label">T</span>
+							<span>{{ data.contact.phone }}</span>
+						</div>
+						<div>
+							<span class="label">E</span>
+							<span>{{ data.contact.email }}</span>
+						</div>
+					</div>
 				</div>
 
-				<div class="general-container">
-					<div class="name">
-						<span class="first-name" ng-if="data.firstName">{{ data.firstName }}</span>
-						<span class="last-name" ng-if="data.lastName">{{ data.lastName }}</span>
-					</div>
-					<div class="occupation" ng-if="data.occupation">{{ data.occupation }}</div>
-				</div>
-
-				<div class="contact-container">
-					<div>
-						<span class="label">T</span>
-						<span>{{ data.contact.phone }}</span>
-					</div>
-					<div>
-						<span class="label">E</span>
-						<span>{{ data.contact.email }}</span>
-					</div>
-				</div>
-
-				<div class="side-info-section">
-					<div class="header">
-						<div class="label">Overview</div>
-					</div>
-					<div class="content">{{ data.overview }}</div>
-				</div>
-
-				<div class="side-info-section">
-					<div class="header">
-						<div class="label">Skills</div>
+				<div class="side-content-bottom">
+					<div class="side-info-section">
+						<div class="header">
+							<div class="label">Overview</div>
+						</div>
+						<div class="content">{{ data.overview }}</div>
 					</div>
 
-					<div class="skillset-container" ng-repeat="skillset in data.skillsets">
-						<div class="subheader">{{ skillset.name }} Skills</div>
-						<div class="content skill-sets-container">
-							<div class="skill-set"
-								 ng-repeat="skill in skillset.skills | orderBy:'-progress'"
-							>
-								<div class="name">{{ skill.name }}</div>
-								<div class="progress">
-									<div class="progress-bar"
-										 ng-style="{'width': skill.progress + '%'}"
-									>
+					<div class="side-info-section">
+						<div class="header">
+							<div class="label">Skills</div>
+						</div>
+
+						<div class="skillset-container" ng-repeat="skillset in data.skillsets">
+							<div class="subheader">{{ skillset.name }} Skills</div>
+							<div class="content skill-sets-container">
+								<div class="skill-set"
+									 ng-repeat="skill in skillset.skills | orderBy:'-progress'"
+								>
+									<div class="name">{{ skill.name }}</div>
+									<div class="progress">
+										<div class="progress-bar"
+											 ng-style="{'width': skill.progress + '%'}"
+										>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -111,9 +116,12 @@
 						<div class="section experience-section"
 							 ng-repeat="experience in data.workExperience"
 						>
-							<div class="position">{{ experience.position }}</div>
-							<div class="time">{{ experience.time }}</div>
-							<div class="location">{{ experience.location }}</div>
+							<div class="secondary-data">
+								<span class="highlight">{{ experience.company}}</span>
+								<span >{{ experience.location }}</span>
+							</div>
+							<div class="primary-data">{{ experience.position }}</div>
+							<div class="time-frame">{{ experience.time }}</div>
 							<div class="description">{{ experience.description }}</div>
 						</div>
 					</div>
@@ -132,9 +140,12 @@
 						<div class="section education-section"
 							 ng-repeat="education in data.education"
 						>
-							<div class="name">{{ education.name }}</div>
-							<div class="program">{{ education.program }}</div>
-							<div class="time">{{ education.time }}</div>
+							<div class="secondary-data">
+								<span class="highlight">{{ education.school }}</span>
+								<span>{{ education.faculty }}</span>
+							</div>
+							<div class="primary-data">{{ education.program }}</div>
+							<div class="time-frame">{{ education.time }}</div>
 							<div class="description">{{ education.description }}</div>
 						</div>
 					</div>
@@ -153,9 +164,11 @@
 						<div class="section project-section"
 							 ng-repeat="project in data.projects"
 						>
-							<div class="name">{{ project.name }}</div>
+							<div class="secondary-data">
+								<span class="highlight">{{ getProjectRolesDisplay(project) }}</span>
+							</div>
+							<div class="primary-data">{{ project.name }}</div>
 							<div class="stack">{{ getProjectStackDisplay(project) }}</div>
-							<div class="role">{{ getProjectRolesDisplay(project) }}</div>
 							<div class="description">{{ project.description }}</div>
 						</div>
 					</div>
