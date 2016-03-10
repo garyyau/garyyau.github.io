@@ -11,18 +11,18 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 	<link href="css/style-print.css" rel="stylesheet" type="text/css" media="print" />
 </head>
-<body>
-	
-	<div class="mui-container" ng-controller="LayoutController">
-		<div class="content-container mui-row">
-			<div class="side-content">
 
-				<div class="side-content-top">
-					<div class="profile-photo-container">
+<body>
+	<div class="mui-container" ng-controller="LayoutController">
+		<div class="body-container">
+
+			<div class="introduction-container">
+				<div class="introduction-top">
+					<div class="photo-container">
 						<img ng-src="{{data.profileImage}}" class="rounded" />
 					</div>
 
-					<div class="general-container">
+					<div class="name-container">
 						<div class="name">
 							<span class="first-name" ng-if="data.firstName">{{ data.firstName }}</span>
 							<span class="last-name" ng-if="data.lastName">{{ data.lastName }}</span>
@@ -32,34 +32,38 @@
 
 					<div class="contact-container">
 						<div class="header">Contact</div>
-						<div>
-							<span class="label">T</span>
+						<div class="contact">
+							<span class="label">
+								<i class="zmdi zmdi-phone"></i>
+							</span>
 							<span>{{ data.contact.phone }}</span>
 						</div>
-						<div>
-							<span class="label">E</span>
+						<div class="contact">
+							<span class="label">
+								<i class="zmdi zmdi-email"></i>
+							</span>
 							<span>{{ data.contact.email }}</span>
 						</div>
 					</div>
 				</div>
 
-				<div class="side-content-bottom">
-					<div class="side-info-section">
+				<div class="introduction-bottom">
+					<div class="section introduction-section overview">
 						<div class="header">
 							<div class="label">Overview</div>
 						</div>
 						<div class="content">{{ data.overview }}</div>
 					</div>
 
-					<div class="side-info-section">
+					<div class="section introduction-section skills">
 						<div class="header">
 							<div class="label">Skills</div>
 						</div>
 
-						<div class="skillset-container" ng-repeat="skillset in data.skillsets">
+						<div class="content skill-set-container" ng-repeat="skillset in data.skillsets">
 							<div class="subheader">{{ skillset.name }} Skills</div>
-							<div class="content skill-sets-container">
-								<div class="skill-set"
+							<div class="skill-set">
+								<div class="skill"
 									 ng-repeat="skill in skillset.skills | orderBy:'-progress'"
 								>
 									<div class="name">{{ skill.name }}</div>
@@ -74,24 +78,20 @@
 						</div>
 					</div>
 				</div>
-			
 			</div>
 
-			<div class="main-content">
-
-				<div class="main-info-section" ng-if="data.technicalProfile">
+			<div class="main-content-container">
+				<div class="section main-content-section technical-profile-section" ng-if="data.technicalProfile">
 					<div class="header">
 						<div class="label">
-							<div class="icon">
-								<div class="icon-container">
-									<i class="zmdi zmdi-wrench"></i>
-								</div>
+							<div class="icon-container">
+								<i class="zmdi zmdi-wrench"></i>
 							</div>
 							<span>Technical Profile</span>
 						</div>
 					</div>
-					<div class="section-container technical-profiles-container">
-						<div class="section technical-profile-section mui--clearfix"
+					<div class="content">
+						<div class="profile-row"
 							 ng-repeat="profile in data.technicalProfile"
 						>
 							<div class="name">{{ profile.name }}</div>
@@ -103,17 +103,17 @@
 					</div>
 				</div>
 
-				<div class="main-info-section" ng-if="data.workExperience">
+				<div class="section main-content-section work-experience-section" ng-if="data.workExperience">
 					<div class="header">
 						<div class="label">
-							<div class="icon">
+							<div class="icon-container">
 								<i class="zmdi zmdi-case"></i>
 							</div>
 							<span>Work Experience</span>
 						</div>
 					</div>
-					<div class="section-container">
-						<div class="section experience-section"
+					<div class="content">
+						<div class="experience"
 							 ng-repeat="experience in data.workExperience"
 						>
 							<div class="secondary-data">
@@ -127,17 +127,17 @@
 					</div>
 				</div>
 
-				<div class="main-info-section" ng-if="data.education">
+				<div class="section main-content-section education-section" ng-if="data.education">
 					<div class="header">
 						<div class="label">
-							<div class="icon">
+							<div class="icon-container">
 								<i class="zmdi zmdi-graduation-cap"></i>
 							</div>
 							<span>Education</span>
 						</div>
 					</div>
-					<div class="section-container">
-						<div class="section education-section"
+					<div class="content">
+						<div class="experience"
 							 ng-repeat="education in data.education"
 						>
 							<div class="secondary-data">
@@ -151,17 +151,17 @@
 					</div>
 				</div>
 
-				<div class="main-info-section" ng-if="data.projects">
+				<div class="section main-content-section project-section" ng-if="data.projects">
 					<div class="header">
 						<div class="label">
-							<div class="icon">
+							<div class="icon-container">
 								<i class="zmdi zmdi-code"></i>
 							</div>
 							<span>Projects</span>
 						</div>
 					</div>
-					<div class="section-container">
-						<div class="section project-section"
+					<div class="content">
+						<div class="experience"
 							 ng-repeat="project in data.projects"
 						>
 							<div class="secondary-data">
@@ -173,7 +173,6 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 			
 		</div>

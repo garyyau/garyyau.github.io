@@ -8,11 +8,13 @@ html, body {
 	font-family: 'Roboto', sans-serif;
 }
 
-/* General Layout */
+// Overall Layout Structure
 $outer-padding-vertical: 60px;
-$outer-padding-horizontal: 25px;
-$section-margin: 40px;
-.content-container {
+$outer-padding-horizontal: 30px;
+$section-margin: 25px;
+$header-icon-px: 35px;
+.body-container {
+	@extend .mui-row;
 	@extend.mui--z2;
 
 	display: flex;
@@ -20,7 +22,7 @@ $section-margin: 40px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.side-content {
+.introduction-container {
 	@extend .mui-col-md-4;
 
 	display: flex;
@@ -28,30 +30,58 @@ $section-margin: 40px;
 	padding: 0;
 	color: $mui-text-light;
 
-	.side-content-top,
-	.side-content-bottom {
+	.introduction-top,
+	.introduction-bottom {
 		padding-right: $outer-padding-horizontal;
 		padding-left: $outer-padding-horizontal;
 		width: 100%;
 		background-color: $sidebar-bg-color;
 	}
-	.side-content-top {
+	.introduction-top {
 		padding-top: $outer-padding-vertical;
 	}
-	.side-content-bottom {
+	.introduction-bottom {
 		flex-grow: 1;
 		padding-bottom: $outer-padding-vertical;
 	}
 }
-.main-content {
+.main-content-container {
 	@extend .mui-col-md-8;
 
 	padding: $outer-padding-vertical $outer-padding-horizontal;
 	background-color: $content-bg-color;
 }
 
-/* Side Content */
-.profile-photo-container {
+// Shared Components Styling
+.section {
+	margin-bottom: $section-margin;
+
+	.header {
+		@extend .mui--text-headline;
+
+		position: relative;
+		margin-bottom: 5px;
+
+		.label {
+			position: relative;
+			z-index: 1;
+			display: inline-block;
+			padding-right: 10px;
+			text-transform: uppercase;
+			line-height: $header-icon-px;
+		}
+		&:after {
+			position: absolute;
+			top: 50%;
+			display: block;
+			width: 100%;
+			border-top: 1px solid $mui-text-dark;
+			content: " ";
+		}
+	}
+}
+// Introduction Top Content Styling
+.photo-container {
 	$profile-pic-px: 150px;
 
 	@extend .mui--z2;
@@ -71,7 +101,7 @@ $section-margin: 40px;
 		width: 100%;
 	}
 }
-.general-container {
+.name-container {
 	margin-bottom: $section-margin;
 	text-align: center;
 
@@ -92,41 +122,51 @@ $section-margin: 40px;
 	}
 }
 .contact-container {
-	margin: 0 20px $section-margin;
+	@extend .mui--text-subhead;
+
+	margin: 0 auto $section-margin;
+	width: 58%;
 	line-height: 28px;
 
 	.header {
 		display: none;
 	}
-	.label {
-		margin-right: 25px;
-		font-weight: bold;
+	.contact {
+		.label {
+			margin-right: 25px;
+			font-weight: bold;
+		}
 	}
 }
-.side-info-section {
-	margin-bottom: $section-margin / 2;
-
+// Introduction Bottom Styling
+.introduction-section {
 	.header {
 		.label {
-			background-color: $mui-primary-color;
+			background-color: $sidebar-bg-color;
 			color: $mui-text-light;
 		}
 		&:after {
 			border-color: $mui-text-light;
 		}
 	}
+	.subheader {
+		margin-bottom: 10px;
+		color: $mui-text-light-secondary;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
 	.content {
 		margin-right: 7px;
 		margin-left: 7px;
 	}
 }
-.skill-sets-container {
+.skill-set {
 	margin-bottom: 20px;
 }
-.skill-set {
+.skill {
 	$progress-bar-height: 15px;
 
-	margin-bottom: 5px;
+	margin-bottom: 2px;
 
 	.name {
 		text-transform: capitalize;
@@ -142,21 +182,62 @@ $section-margin: 40px;
 		}
 	}
 }
-.main-info-section {
-	margin-bottom: $section-margin;
-	width: 100%;
-}
-.section-container {
-	margin-top: $section-margin / 3;
-}
-.section {
-	margin: 0 auto;
-	padding: 3px 0;
-	width: 96%;
+// Main Content Styling
+.main-content-section {
+	.header {
+		margin-bottom: 10px;
 
-	&:last-child {
-		padding-bottom: 0px;
+		.label {
+			background-color: $content-bg-color;
+			color: $mui-primary-color;
+
+			.icon-container {
+				display: inline-block;
+				width: $header-icon-px;
+				height: $header-icon-px;
+				border-radius: 50%;
+				background-color: $sidebar-bg-color;
+				color: $mui-text-light;
+				text-align: center;
+			}
+		}
+		&:after {
+			border-color: $mui-primary-color;
+		}
 	}
+	.content {
+		margin-left: 15px;
+	}
+}
+.project-section {
+	.stack {
+		margin-top: 10px;
+	}
+}
+.profile-row {
+	line-height: 28px;
+
+	&:not(:first-child) {
+		border-top: 1px solid black;
+	}
+	&:before, &:after {
+		display: table;
+		clear: both;
+		content: ' ';
+	}
+	.name {
+		display: block;
+		float: left;
+		width: 18%;
+		font-weight: bold;
+	}
+	.element {
+		display: block;
+		float: left;
+		width: 82%;
+	}
+}
+.experience {
 	.primary-data {
 		@extend .mui--text-headline;
 
@@ -182,71 +263,4 @@ $section-margin: 40px;
 	.description {
 		margin: 10px 0 15px;
 	}
-}
-.technical-profile-section {
-	.name {
-		display: block;
-		float: left;
-		width: 18%;
-		font-weight: bold;
-	}
-	.element {
-		display: block;
-		float: left;
-		width: 82%;
-	}
-	&:not(:first-child) {
-		border-top: 1px solid black;
-	}
-}
-.project-section {
-	.stack {
-		margin-top: 10px;
-	}
-}
-
-/* Shared Components */
-.header {
-	$header-icon-px: 35px;
-
-	@extend .mui--text-headline;
-
-	position: relative;
-	margin-bottom: 5px;
-
-	.icon {
-		display: inline-block;
-		width: $header-icon-px;
-		height: $header-icon-px;
-		border-radius: 50%;
-		background-color: $sidebar-bg-color;
-		color: $mui-text-light;
-		text-align: center;
-	}
-	.label {
-		position: relative;
-		z-index: 1;
-		display: inline-block;
-		padding-right: 10px;
-		background-color: $content-bg-color;
-		color: $sidebar-bg-color;
-		text-transform: uppercase;
-		line-height: $header-icon-px;
-	}
-	&:after {
-		position: absolute;
-		top: 50%;
-		display: block;
-		width: 100%;
-		border-top: 1px solid $sidebar-bg-color;
-		content: " ";
-	}
-}
-.subheader {
-	@extend .mui--text-subheader;
-
-	margin-bottom: 10px;
-	color: $mui-text-light-secondary;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }

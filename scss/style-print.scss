@@ -5,9 +5,11 @@
 
 @media print {
 	$print-section-margin: 15pt;
+	$print-side-padding: 40pt;
 
 	/* General Layout */
 	html, body {
+		background-color: $content-bg-color;
 		font-size: 10pt;
 		line-height: 12pt;
 	}
@@ -15,20 +17,22 @@
 		max-width: none;
 		width: 100%;
 	}
-	.content-container {
+	.body-container {
 		flex-direction: column;
 		margin-top: 0;
 		margin-bottom: 0;
 		box-shadow: none;
 	}
-	.side-content {
+	.introduction-container {
 		display: block;
 		width: 100%;
 
-		.side-content-top {
+		.introduction-top {
 			display: flex;
-			justify-content: center;
+			justify-content: flex-end;
 			padding-top: 20pt;
+			padding-right: $print-side-padding;
+			padding-left: $print-side-padding;
 			text-align: center;
 
 			&:before, &:after {
@@ -37,8 +41,10 @@
 				content: ' ';
 			}
 		}
-		.side-content-bottom {
+		.introduction-bottom {
+			padding-right: $print-side-padding;
 			padding-bottom: 20pt;
+			padding-left: $print-side-padding;
 			background-color: $content-bg-color;
 		}
 	}
@@ -46,7 +52,8 @@
 		padding: 20pt 20pt 30pt 15pt;
 		width: 67%;
 	}
-	.profile-photo-container {
+	/* Side Content */
+	.photo-container {
 		position: relative;
 		z-index: 1;
 		order: 2;
@@ -56,7 +63,7 @@
 		border: 2pt solid $mui-text-light;
 		box-shadow: none;
 	}
-	.general-container {
+	.name-container {
 		position: relative;
 		order: 1;
 		margin-top: 50pt;
@@ -113,17 +120,57 @@
 				content: '';
 			}
 		}
+		.label {
+			display: none;
+		}
 	}
-	.side-info-section {
+	.introduction-section {
+		display: block;
+		margin-top: $print-section-margin * 2;
 		margin-bottom: $print-section-margin / 2;
+		color: $mui-text-dark;
+
+		&.overview {
+			float: left;
+			width: 46%;
+		}
+		&.skills {
+			float: right;
+			width: 54%;
+		}
+		.header {
+			.label {
+				margin-bottom: 10pt;
+				background-color: transparent;
+				color: $mui-primary-color;
+			}
+			&:after {
+				border: none;
+			}
+		}
+		.content {
+			margin-right: 0;
+			margin-left: 0;
+		}
 	}
-	.skill-sets-container {
-		margin-bottom: 10pt;
+	.skillset-container {
+		float: right;
+		width: 47.5%;
+
+		&:last-child {
+			margin-right: 5%;
+		}
+		.subheader {
+			display: none;
+		}
 	}
 	.skill-set {
-		$print-progress-bar-height: 9pt;
+		$print-progress-bar-height: 15pt;
 
 		.name {
+			margin-bottom: -13pt;
+			margin-left: 5pt;
+			color: $mui-text-light;
 			font-size: 9pt;
 		}
 		.progress {
@@ -195,6 +242,7 @@
 		}
 	}
 	.subheader {
+		color: $mui-text-dark;
 		letter-spacing: 1pt;
 		font-size: 9pt;
 	}

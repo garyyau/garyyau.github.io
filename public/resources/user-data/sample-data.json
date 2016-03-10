@@ -104,19 +104,22 @@
 		
 		{
 			"position": "One-Handed Sword Spriggan",
-			"location": "New Aincrad in ALfheim Online",
+			"company": "New Aincrad",
+			"location": "ALfheim Online",
 			"time": "Nov 2024 - Current",
 			"description": "Kirito's initial appearance was that of a default «Spriggan», which he chose because of the race's black-themed equipment. Instead of the normal black forelocks hanging from his head, his black hair stood in natural spikes. His large eyes appeared mischievous, and he had pointy ears and dark greyish blue wings. He is equipped with a large broadsword, intended for larger players, like «Imps». He will occasionally dual wield using his experience from SAO.",
 		},
 		{
 			"position": "Photon Sword Gunsman",
-			"location": "SBC Glocken in Gun Gale Online",
+			"company": "SBC Glocken",
+			"location": "Gun Gale Online",
 			"time": "Dec 2025 - Dec 2025",
 			"description": "Kirito's avatar in GGO is the rare «M9000» type, which is speculated by GGO players to be awarded to players with long play time. It is an avatar that many male players dream of having, due to its feminine appearance. He retains his black hair, which now flows down to his shoulders. He has a pale skin and crimson lips, and shining black eyes, fringed by long eyelashes. These characteristics often allow others to confuse him as being female. This often causes great confusion to people, such as Sinon. He is equipped with a 5.7mm FN Five Seven handgun and «Kagemitsu G4» photon sword.",
 		},
 		{
 			"position": "The Black Swordsman",
-			"location": "Aincrad in Sword Art Online",
+			"company": "Aincrad",
+			"location": "Sword Art Online",
 			"time": "Nov 2022 - Nov 2024",
 			"description": "After the initial stages, Kirito became well known in SAO as the «Black Swordsman» (黒の剣士, Kuro no Kenshi?) due to his tendency to wear black clothing. His clothes in Sword Art Online consisted of black pants with a black belt that had a large silver buckle, a black V-necked shirt that was worn underneath a black trench-coat with gray lining going down the sleeves, and black boots with silver plates to protect his shins. He has a silver plate worn on on the left side of his coat, and a pair of black fingerless gloves. He wore a strap, that went over his right shoulder and under it to wrap around his left side, and at first held only his Elucidator, but then his Dark Repulser as well.",
 		}, 
@@ -124,8 +127,9 @@
 	"education":
 	[
 		{
-			"name": "Simon Fraser University",
-			"program": "Major in Computing Science, Bachelor of Science",
+			"school": "Simon Fraser University",
+			"program": "Major in Computing Science",
+			"faculty": "Bachelor of Science",
 			"time": "Dec 2013",
 			"description": "Focused on Object-Oriented Programming and other software development concepts such as database design, networking and software engineering. Courses also introduces a wide-variety of programming languages, coding conventions and common methodologies to provide introductory knowledge on the topics.",
 		}
