@@ -3,13 +3,14 @@
 @import '_colors';
 
 
-@media print {
+$print-content-bg-color: white;
 $print-section-margin: 15pt;
 $print-side-padding: 40pt;
+$print-header-icon-px: 20pt;
 
 /* General Layout */
 html, body {
-	background-color: $content-bg-color;
+	background-color: $print-content-bg-color;
 	font-size: 9pt;
 	line-height: 12pt;
 }
@@ -18,7 +19,7 @@ html, body {
 	width: 100%;
 }
 .body-container {
-	flex-direction: column;
+	display: block;
 	margin-top: 0;
 	margin-bottom: 0;
 	box-shadow: none;
@@ -48,7 +49,7 @@ html, body {
 		padding-right: $print-side-padding;
 		padding-bottom: $print-section-margin / 2;
 		padding-left: $print-side-padding;
-		background-color: $content-bg-color;
+		background-color: $print-content-bg-color;
 	}
 }
 .main-content-container {
@@ -57,6 +58,19 @@ html, body {
 	padding-bottom: 0;
 	padding-left: $print-side-padding - 10;
 	width: 100%;
+	background-color: $print-content-bg-color;
+
+	.header {
+		.icon-container {
+			width: $print-header-icon-px;
+			height: $print-header-icon-px;
+
+			.zmdi {
+				font-size: 12pt;
+				line-height: 20pt;
+			}
+		}
+	}
 }
 // Shared Components Styling
 .section {
@@ -75,6 +89,7 @@ html, body {
 			}
 		}
 		.label {
+			background-color: $print-content-bg-color;
 			line-height: $print-header-icon-px;
 		}
 	}
@@ -110,7 +125,7 @@ html, body {
 			position: absolute;
 			bottom: 24pt;
 			left: -5px;
-			width: 280pt;
+			width: 232pt;
 			border-bottom: 1pt solid $mui-text-light-secondary;
 			content: "";
 		}
@@ -147,7 +162,7 @@ html, body {
 			position: absolute;
 			top: 15pt;
 			right: -5pt;
-			width: 180pt;
+			width: 140pt;
 			border-top: none;
 			border-bottom: 1pt solid $mui-text-light-secondary;
 			content: "";
@@ -173,7 +188,7 @@ html, body {
 	}
 	.header {
 		.label {
-			background-color: $content-bg-color;
+			background-color: $print-content-bg-color;
 			color: $mui-primary-color;
 		}
 		&:after {
@@ -204,7 +219,7 @@ html, body {
 		width: 100%;
 	}
 	.skill {
-		$print-progress-bar-height: 10pt;
+		$print-progress-bar-height: 8pt;
 
 		margin-bottom: 0;
 
@@ -222,6 +237,11 @@ html, body {
 			float: left;
 			width: 50%;
 			height: $print-progress-bar-height;
+			background-color: $mui-primary-color-light;
+
+			.progress-bar {
+				background-color: $mui-primary-color;
+			}
 		}
 	}
 }
@@ -234,7 +254,14 @@ html, body {
 .profile-row {
 	line-height: 18pt;
 }
+.work-experience-section {
+	.experience:last-child {
+		padding-top: 30pt;
+	}
+}
 .experience {
+	page-break-inside: avoid;
+
 	.primary-data {
 		font-size: 14pt;
 		line-height: 18pt;
@@ -244,9 +271,10 @@ html, body {
 			font-size: 10pt;
 		}
 	}
+	.time-frame {
+		display: none;
+	}
 	.description {
 		margin-top: 5pt;
 	}
-}
-
 }

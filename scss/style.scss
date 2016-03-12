@@ -191,19 +191,18 @@ $header-icon-px: 35px;
 		.label {
 			background-color: $content-bg-color;
 			color: $mui-primary-color;
+		}
+		.icon-container {
+			display: inline-block;
+			width: $header-icon-px;
+			height: $header-icon-px;
+			border-radius: 50%;
+			background-color: $sidebar-bg-color;
+			color: $mui-text-light;
+			text-align: center;
 
-			.icon-container {
-				display: inline-block;
-				width: $header-icon-px;
-				height: $header-icon-px;
-				border-radius: 50%;
-				background-color: $sidebar-bg-color;
-				color: $mui-text-light;
-				text-align: center;
-
-				.zmdi {
-					line-height: 25pt;
-				}
+			.zmdi {
+				line-height: 25pt;
 			}
 		}
 		&:after {
