@@ -32,17 +32,32 @@
 
 					<div class="contact-container">
 						<div class="header">Contact</div>
-						<div class="contact">
-							<span class="label">
-								<i class="zmdi zmdi-phone"></i>
-							</span>
-							<span>{{ data.contact.phone }}</span>
+						<div class="socials">
+							<div class="social"
+								 ng-repeat="social in data.contact.socials">
+								 <a href="{{ social.link }}" target="_blank">
+									 <span class="label">
+									 	<i class="{{ social.iconClasses}}"></i>
+									 	<span>{{ social.linkText }}</span>
+									 </span>
+								</a>
+							</div>
 						</div>
-						<div class="contact">
-							<span class="label">
-								<i class="zmdi zmdi-email"></i>
-							</span>
-							<span>{{ data.contact.email }}</span>
+						<div class="contacts">
+							<div class="contact">
+								<span class="label">
+									<i class="zmdi zmdi-phone"></i>
+									<span>{{ data.contact.phone }}</span>
+								</span>
+							</div>
+							<div class="contact">
+								<a href="" target="_blank">
+									<span class="label">
+										<i class="zmdi zmdi-email"></i>
+										<span>{{ data.contact.email }}</span>
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -165,11 +180,12 @@
 							 ng-repeat="project in data.projects"
 						>
 							<div class="secondary-data">
-								<span class="highlight">{{ getProjectRolesDisplay(project) }}</span>
+								<span class="highlight">{{ project.location }}</span>
 							</div>
 							<div class="primary-data">{{ project.name }}</div>
 							<div class="stack">{{ getProjectStackDisplay(project) }}</div>
 							<div class="description">{{ project.description }}</div>
+							<div class="roles">Roles: {{ getProjectRolesDisplay(project) }}</div>
 						</div>
 					</div>
 				</div>
