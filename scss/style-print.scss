@@ -5,13 +5,13 @@
 
 $print-content-bg-color: white;
 $print-section-margin: 15pt;
-$print-side-padding: 40pt;
+$print-side-padding: 50pt;
 $print-header-icon-px: 20pt;
 
 /* General Layout */
 html, body {
 	background-color: $print-content-bg-color;
-	font-size: 9pt;
+	font-size: 10pt;
 	line-height: 12pt;
 }
 .mui-container {
@@ -123,7 +123,7 @@ html, body {
 
 		&:after {
 			position: absolute;
-			bottom: 24pt;
+			bottom: 29pt;
 			left: -5px;
 			width: 232pt;
 			border-bottom: 1pt solid $mui-text-light-secondary;
@@ -141,6 +141,8 @@ html, body {
 }
 .contact-container {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	order: 3;
 	margin-top: 10pt;
 	margin-right: 75pt;
@@ -162,15 +164,55 @@ html, body {
 			position: absolute;
 			top: 15pt;
 			right: -5pt;
-			width: 140pt;
+			width: 163pt;
 			border-top: none;
 			border-bottom: 1pt solid $mui-text-light-secondary;
 			content: "";
 		}
 	}
-	.contact {
+	.socials {
+		order: 2;
+		margin-bottom: 0;
+		text-align: left;
+
+		.social {
+			display: block;
+			margin: 0;
+			line-height: 16pt;
+		}
+		a:hover .label {
+			background-color: transparent;
+			color: $mui-text-light-secondary;
+		}
 		.label {
-			margin-right: 10pt;
+			width: auto;
+			height: auto;
+			border-radius: 0;
+			background-color: transparent;
+			color: $mui-text-light;
+
+			.zmdi {
+				margin-right: 8pt;
+				width: 10pt;
+				font-size: inherit;
+				line-height: 18pt;
+			}
+			span {
+				display: inline-block;
+			}
+		}
+	}
+	.contact {
+		order: 1;
+
+		.label {
+			margin-right: 0;
+
+			.zmdi {
+				margin-right: 8pt;
+				width: 10pt;
+				line-height: 18pt;
+			}
 		}
 	}
 }
@@ -251,8 +293,12 @@ html, body {
 		margin-top: 5pt;
 	}
 }
-.profile-row {
-	line-height: 18pt;
+.technical-profile-section {
+	font-size: 9pt;
+
+	.profile-row {
+		line-height: 18pt;
+	}
 }
 .work-experience-section {
 	.experience:last-child {
@@ -272,7 +318,7 @@ html, body {
 		}
 	}
 	.time-frame {
-		display: none;
+		line-height: 22pt;
 	}
 	.description {
 		margin-top: 5pt;
