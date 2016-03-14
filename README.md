@@ -6,6 +6,7 @@ A web-based resume template for my own personal resume. Who knows, maybe later o
 
 **Language(s):**
 - [SCSS](http://sass-lang.com/)
+
 **Frameworks/Libraries:**
 - [Browserify](http://browserify.org/)
 - [Gulp](http://gulpjs.com/)
