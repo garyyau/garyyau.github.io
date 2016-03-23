@@ -1,4 +1,175 @@
+<!DOCTYPE html>
 <html>
-<head></head>
-<body>Hello</body>
+<head>
+	<meta charset="UTF-8" />
+	<title>Gary Yau @ GitHub.io</title>
+
+	<script type="text/javascript" src="public/js/libs.js"></script>
+	<script type="text/javascript" src="public/js/bundle.js"></script>
+
+	<link href="public/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" type="text/css" />
+	<link href="public/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="public/css/style-print.css" rel="stylesheet" type="text/css" media="print" />
+</head>
+
+<body>
+	<div class="mui-container" ng-controller="LayoutController">
+		<div class="body-container">
+
+			<div class="introduction-container">
+				<div class="introduction-top">
+					<div class="photo-container">
+						<img ng-src="{{data.profileImage}}" class="rounded" />
+					</div>
+
+					<div class="name-container">
+						<div class="name">
+							<span class="first-name" ng-if="data.firstName">{{ data.firstName }}</span>
+							<span class="last-name" ng-if="data.lastName">{{ data.lastName }}</span>
+						</div>
+						<div class="occupation" ng-if="data.occupation">{{ data.occupation }}</div>
+					</div>
+
+					<div class="contact-container">
+						<div class="header">Contact</div>
+						<div class="socials">
+							<div class="social"
+								 ng-repeat="social in data.contact.socials">
+								 <a href="{{ social.link }}" target="_blank">
+									 <span class="label">
+									 	<i class="{{ social.iconClasses}}"></i>
+									 	<span>{{ social.linkText }}</span>
+									 </span>
+								</a>
+							</div>
+						</div>
+						<div class="contacts">
+							<div class="contact">
+								<span class="label">
+									<i class="zmdi zmdi-phone"></i>
+									<span>{{ data.contact.phone }}</span>
+								</span>
+							</div>
+							<div class="contact">
+								<a href="" target="_blank">
+									<span class="label">
+										<i class="zmdi zmdi-email"></i>
+										<span>{{ data.contact.email }}</span>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="introduction-bottom">
+					<div class="section introduction-section overview">
+						<div class="header">
+							<div class="label">Overview</div>
+						</div>
+						<div class="content">{{ data.overview }}</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-content-container">
+				<div class="section main-content-section technical-profile-section" ng-if="data.technicalProfile">
+					<div class="header">
+						<div class="label">
+							<div class="icon-container">
+								<i class="zmdi zmdi-wrench"></i>
+							</div>
+							<span>Technical Profile</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="profile-row"
+							 ng-repeat="profile in data.technicalProfile"
+						>
+							<div class="name">{{ profile.name }}</div>
+							<div class="element"
+								 ng-bind="getProfileElementsDisplay(profile)"
+							></div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="section main-content-section work-experience-section" ng-if="data.workExperience">
+					<div class="header">
+						<div class="label">
+							<div class="icon-container">
+								<i class="zmdi zmdi-case"></i>
+							</div>
+							<span>Work Experience</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="experience"
+							 ng-repeat="experience in data.workExperience"
+						>
+							<div class="secondary-data">
+								<span class="highlight">{{ experience.company}}</span>
+								<span >{{ experience.location }}</span>
+							</div>
+							<div class="primary-data">{{ experience.position }}</div>
+							<div class="time-frame">{{ experience.time }}</div>
+							<div class="description">{{ experience.description }}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section main-content-section project-section" ng-if="data.projects">
+					<div class="header">
+						<div class="label">
+							<div class="icon-container">
+								<i class="zmdi zmdi-code"></i>
+							</div>
+							<span>Projects</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="experience"
+							 ng-repeat="project in data.projects"
+						>
+							<div class="secondary-data">
+								<span class="highlight">{{ project.location }}</span>
+							</div>
+							<div class="primary-data">{{ project.name }}</div>
+							<div class="stack">{{ getProjectStackDisplay(project) }}</div>
+							<div class="description">{{ project.description }}</div>
+							<div class="roles">Roles: {{ getProjectRolesDisplay(project) }}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section main-content-section education-section" ng-if="data.education">
+					<div class="header">
+						<div class="label">
+							<div class="icon-container">
+								<i class="zmdi zmdi-graduation-cap"></i>
+							</div>
+							<span>Education</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="experience"
+							 ng-repeat="education in data.education"
+						>
+							<div class="secondary-data">
+								<span class="highlight">{{ education.school }}</span>
+								<span>{{ education.faculty }}</span>
+							</div>
+							<div class="primary-data">{{ education.program }}</div>
+							<div class="time-frame">{{ education.time }}</div>
+							<div class="description">{{ education.description }}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
 </html>
