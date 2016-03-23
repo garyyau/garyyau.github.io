@@ -1,12 +1,6 @@
 
 # Created by https://www.gitignore.io/api/windows,basic,bower,node,sass
 
-### Private ###
-public/resources/user-data/*
-public/js/bundle.js
-public/js/libs.js
-public/css/*
-
 ### Windows ###
 # Windows image file caches
 Thumbs.db

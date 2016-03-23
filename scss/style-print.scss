@@ -103,7 +103,7 @@ html, body {
 .photo-container {
 	z-index: 1;
 	order: 2;
-	margin-right: 0;        
+	margin-right: 0;
 	margin-bottom: $print-section-margin;
 	margin-left: 0;
 	border: 2pt solid $mui-text-light;
@@ -223,9 +223,10 @@ html, body {
 	color: $mui-text-dark;
 
 	&.overview {
-		width: 47.5%;
+		width: 100%;
 	}
 	&.skills {
+		display: none;
 		width: 47.5%;
 	}
 	.header {

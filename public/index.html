@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Resume Template</title>
-	
+
 	<script type="text/javascript" src="js/libs.js"></script>
 	<script type="text/javascript" src="js/bundle.js"></script>
 
@@ -69,29 +69,6 @@
 						</div>
 						<div class="content">{{ data.overview }}</div>
 					</div>
-
-					<div class="section introduction-section skills">
-						<div class="header">
-							<div class="label">Skills</div>
-						</div>
-
-						<div class="content skill-set-container" ng-repeat="skillset in data.skillsets">
-							<div class="subheader">{{ skillset.name }} Skills</div>
-							<div class="skill-set">
-								<div class="skill"
-									 ng-repeat="skill in skillset.skills | orderBy:'-progress'"
-								>
-									<div class="name">{{ skill.name }}</div>
-									<div class="progress">
-										<div class="progress-bar"
-											 ng-style="{'width': skill.progress + '%'}"
-										>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 
@@ -142,30 +119,6 @@
 					</div>
 				</div>
 
-				<div class="section main-content-section education-section" ng-if="data.education">
-					<div class="header">
-						<div class="label">
-							<div class="icon-container">
-								<i class="zmdi zmdi-graduation-cap"></i>
-							</div>
-							<span>Education</span>
-						</div>
-					</div>
-					<div class="content">
-						<div class="experience"
-							 ng-repeat="education in data.education"
-						>
-							<div class="secondary-data">
-								<span class="highlight">{{ education.school }}</span>
-								<span>{{ education.faculty }}</span>
-							</div>
-							<div class="primary-data">{{ education.program }}</div>
-							<div class="time-frame">{{ education.time }}</div>
-							<div class="description">{{ education.description }}</div>
-						</div>
-					</div>
-				</div>
-
 				<div class="section main-content-section project-section" ng-if="data.projects">
 					<div class="header">
 						<div class="label">
@@ -189,8 +142,32 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="section main-content-section education-section" ng-if="data.education">
+					<div class="header">
+						<div class="label">
+							<div class="icon-container">
+								<i class="zmdi zmdi-graduation-cap"></i>
+							</div>
+							<span>Education</span>
+						</div>
+					</div>
+					<div class="content">
+						<div class="experience"
+							 ng-repeat="education in data.education"
+						>
+							<div class="secondary-data">
+								<span class="highlight">{{ education.school }}</span>
+								<span>{{ education.faculty }}</span>
+							</div>
+							<div class="primary-data">{{ education.program }}</div>
+							<div class="time-frame">{{ education.time }}</div>
+							<div class="description">{{ education.description }}</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			
+
 		</div>
 	</div>
 

@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var angular = require('angular');
-var data = require('./../public/resources/user-data/data.json');
+var data = require('./../public/resources/data.json');
 
 
 var app = angular.module('ResumeTemplateApp', []);
