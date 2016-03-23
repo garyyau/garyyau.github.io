@@ -1,5 +1,5 @@
 {
-	"profileImage": "./resources/profile-picture.png",
+	"profileImage": "./public/resources/profile-picture.png",
 	"firstName": "Gary K.",
 	"lastName": "Yau",
 	"occupation": "Developer. Designer. Quality Assurance.",

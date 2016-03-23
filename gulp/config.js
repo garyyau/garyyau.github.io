@@ -13,6 +13,6 @@ module.exports.paths = {
 		'base': publicPath,
 		'css': publicPath + 'css/',
 		'js': publicPath + 'js/',
-		'html': publicPath,
+		'html': basePath,
 	},
 };
