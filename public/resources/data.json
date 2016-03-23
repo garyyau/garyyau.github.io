@@ -1,5 +1,5 @@
 {
-	"profileImage": "./resources/user-data/profile-picture.png",
+	"profileImage": "./resources/profile-picture.png",
 	"firstName": "Gary K.",
 	"lastName": "Yau",
 	"occupation": "Developer. Designer. Quality Assurance.",
@@ -155,7 +155,7 @@
 			"program": "Major in Computing Science",
 			"faculty": "Bachelor of Science",
 			"time": "Dec 2013",
-			"description": "",
+			"description": "Focused on Object-Oriented Programming and other software development concepts such as database design, networking and software engineering.",
 		}
 	],
 	"projects":
@@ -165,7 +165,7 @@
 			"location": "DHX Studios",
 			"roles": ["Scrum Master", "Software Developer", "UX Designer"],
 			"stack": ["Django, AngularJS, HTML, SCSS, MySQL"],
-			"description": "Designed and developed task management system and show breakdown system alongside external system, Shotgun, to integrate Shotgun into studio pipeline while maintaining legacy system features. Developed an API to provide communication between Shotgun and legacy system, allowing corporate departments to continue using legacy system to enter user information while ensure information is passed to Shotgun. Led a team of five developers in an Agile scrum environment, allowing tasks to be completed within deadlines while reporting to Head of Software Department on schedule adjustments. Developed unit tests and executed multiple refactoring processes and quality assurance tests to optimize application performance while ensuring stability of each rollout.",
+			"description": "Designed and developed task management system and show breakdown system alongside external system, Shotgun, to integrate Shotgun into studio pipeline while maintaining legacy system features. Developed an API to provide communication between Shotgun and legacy system, allowing corporate departments to continue using legacy system to enter user information while ensure information is passed to Shotgun. Led a team of five developers in an Agile scrum environment, allowing tasks to be completed within deadlines while reporting to Head of Software Department on schedule adjustments.",
 		},
 		{
 			"name": "Muse Client Review",
