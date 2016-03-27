@@ -14,12 +14,12 @@
 
 <body>
 	<div class="mui-container" ng-controller="LayoutController">
-		<div class="body-container">
+		<div class="body-container cover-letter">
 
 			<div class="introduction-container">
 				<div class="introduction-top">
 					<div class="photo-container">
-						<img ng-src="{{data.profileImage}}" class="rounded" />
+						<img ng-src="{{ data.profileImage }}" class="rounded" />
 					</div>
 
 					<div class="name-container">
@@ -171,6 +171,19 @@
 							<div class="description">{{ education.description }}</div>
 						</div>
 					</div>
+				</div>
+
+				<div class="cover-letter-section">
+					<div class="date">{{ data.coverLetter.date }}</div>
+					<div class="content"
+						 ng-repeat="paragraph in getCoverLetterPieces()"
+						 ng-bind="paragraph"></div>
+					<div class="signature">
+						<div>Sincerely,</div>
+						<img src="./public/resources/signature.png">
+						<div class="name">Gary Yau</div>
+					</div>
+
 				</div>
 			</div>
 

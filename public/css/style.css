@@ -2193,3 +2193,26 @@ html, body {
 
 .experience .description {
   margin: 10px 0 15px; }
+
+.cover-letter-section {
+  display: none; }
+  .cover-letter-section .date {
+    margin-top: 30px;
+    margin-bottom: 15px; }
+  .cover-letter-section .content {
+    margin-bottom: 15px; }
+  .cover-letter-section .signature {
+    margin-top: 30px; }
+    .cover-letter-section .signature img {
+      float: left;
+      width: 70px; }
+    .cover-letter-section .signature .name {
+      margin-top: 45px; }
+
+.cover-letter .introduction-bottom,
+.cover-letter .main-content-section {
+  display: none !important; }
+
+.cover-letter .cover-letter-section {
+  display: block;
+  padding: 25px; }

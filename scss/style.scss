@@ -91,7 +91,7 @@ $header-icon-px: 35px;
 	margin-top: 0;
 	margin-right: auto;
 	margin-bottom: $section-margin/2;
-	margin-left: auto; 
+	margin-left: auto;
 	width: $profile-pic-px;
 	height: $profile-pic-px;
 	border-radius: 50%;
@@ -311,5 +311,38 @@ $header-icon-px: 35px;
 	}
 	.description {
 		margin: 10px 0 15px;
+	}
+}
+.cover-letter-section {
+	display: none;
+
+	.date {
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+	.content {
+		margin-bottom: 15px;
+	}
+	.signature {
+		margin-top: 30px;
+
+		img {
+			float: left;
+			width: 70px;
+		}
+		.name {
+			margin-top: 45px;
+		}
+	}
+}
+
+.cover-letter {
+	.introduction-bottom,
+	.main-content-section {
+		display: none !important;
+	}
+	.cover-letter-section {
+		display: block;
+		padding: $section-margin;
 	}
 }
