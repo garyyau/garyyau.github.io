@@ -505,10 +505,8 @@ h4, h5, h6 {
  * MUI Buttons
  */
 .mui-btn {
-  -webkit-animation-duration: 0.0001s;
-          animation-duration: 0.0001s;
-  -webkit-animation-name: mui-node-inserted;
-          animation-name: mui-node-inserted;
+  animation-duration: 0.0001s;
+  animation-name: mui-node-inserted;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -819,10 +817,8 @@ h4, h5, h6 {
   position: relative; }
 
 [data-mui-toggle="dropdown"] {
-  -webkit-animation-duration: 0.0001s;
-          animation-duration: 0.0001s;
-  -webkit-animation-name: mui-node-inserted;
-          animation-name: mui-node-inserted;
+  animation-duration: 0.0001s;
+  animation-name: mui-node-inserted;
   outline: 0; }
 
 .mui-dropdown__menu {
@@ -1238,10 +1234,8 @@ h4, h5, h6 {
       border-color: #01579B;
       border-width: 2px; }
   .mui-select > select {
-    -webkit-animation-duration: 0.0001s;
-            animation-duration: 0.0001s;
-    -webkit-animation-name: mui-node-inserted;
-            animation-name: mui-node-inserted;
+    animation-duration: 0.0001s;
+    animation-name: mui-node-inserted;
     display: block;
     height: 32px;
     width: 100%;
@@ -1375,10 +1369,8 @@ th {
     display: block; }
 
 [data-mui-toggle="tab"] {
-  -webkit-animation-duration: 0.0001s;
-          animation-duration: 0.0001s;
-  -webkit-animation-name: mui-node-inserted;
-          animation-name: mui-node-inserted; }
+  animation-duration: 0.0001s;
+  animation-name: mui-node-inserted; }
 
 /**
  * MUI Textfield Component
@@ -1411,8 +1403,7 @@ th {
 
 .mui-textfield--float-label > label {
   position: absolute;
-  -webkit-transform: translate(0px, 15px);
-          transform: translate(0px, 15px);
+  transform: translate(0px, 15px);
   font-size: 16px;
   line-height: 32px;
   color: rgba(0, 0, 0, 0.26);
@@ -1422,8 +1413,7 @@ th {
 
 .mui-textfield--float-label > input:focus ~ label,
 .mui-textfield--float-label > textarea:focus ~ label {
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   font-size: 12px;
   line-height: 15px;
   text-overflow: ellipsis; }
@@ -1435,8 +1425,7 @@ th {
   color: rgba(0, 0, 0, 0.54);
   font-size: 12px;
   line-height: 15px;
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
   text-overflow: ellipsis; }
 
 .mui-textfield--wrap-label {
@@ -1451,10 +1440,8 @@ th {
 
 .mui-textfield > input,
 .mui-textfield > textarea {
-  -webkit-animation-duration: 0.0001s;
-          animation-duration: 0.0001s;
-  -webkit-animation-name: mui-node-inserted;
-          animation-name: mui-node-inserted;
+  animation-duration: 0.0001s;
+  animation-name: mui-node-inserted;
   display: block;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.87);
@@ -1567,11 +1554,6 @@ th {
 /**
  * MUI Helpers module
  */
-@-webkit-keyframes mui-node-inserted {
-  from {
-    opacity: 0.99; }
-  to {
-    opacity: 1; } }
 @keyframes mui-node-inserted {
   from {
     opacity: 0.99; }
@@ -1865,27 +1847,14 @@ body.mui-body--scroll-lock {
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
-  -webkit-animation: mui-ripple-animation 2s;
-          animation: mui-ripple-animation 2s; }
-
-@-webkit-keyframes mui-ripple-animation {
-  from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 0.4; }
-  to {
-    -webkit-transform: scale(100);
-            transform: scale(100);
-    opacity: 0; } }
+  animation: mui-ripple-animation 2s; }
 
 @keyframes mui-ripple-animation {
   from {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
     opacity: 0.4; }
   to {
-    -webkit-transform: scale(100);
-            transform: scale(100);
+    transform: scale(100);
     opacity: 0; } }
 
 .mui-btn > .mui-ripple-effect {
@@ -1974,22 +1943,18 @@ html, body {
   font-family: 'Roboto', sans-serif; }
 
 .body-container {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+      align-items: stretch;
   margin-top: 20px;
   margin-bottom: 20px; }
 
 .introduction-container {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   padding: 0;
   color: #FFF; }
   .introduction-container .introduction-top,
@@ -2001,9 +1966,8 @@ html, body {
   .introduction-container .introduction-top {
     padding-top: 60px; }
   .introduction-container .introduction-bottom {
-    -webkit-flex-grow: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
     padding-bottom: 60px; }
 
 .main-content-container {
