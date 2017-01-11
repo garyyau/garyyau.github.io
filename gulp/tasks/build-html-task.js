@@ -15,7 +15,10 @@ class BuildHTMLTask {
 	}
 
 	buildHTML() {
-		return gulp.src(paths.source.html + '**/*.html')
+		return gulp.src([
+						paths.source.html + '**/*.html',
+						'!' + paths.source.html + 'node_modules/**/*.html',
+					])
 				   .pipe(reload({stream: true}));
 	}
 

@@ -1,11 +1,12 @@
 {
-	"profileImage": "./resources/profile-picture.png",
+	"profileImage": "./public/resources/profile-picture.png",
 	"firstName": "Gary K.",
 	"lastName": "Yau",
 	"occupation": "Developer. Designer. Quality Assurance.",
 	"contact": {
 		"phone": "+1 (778) 882 0524",
 		"email": "gyau88@gmail.com",
+		"location": "Vancouver, BC, CA",
 		"socials":
 		[
 			{
@@ -20,12 +21,6 @@
 				"linkText": "linkedin.com/in/garyyau",
 				"iconClasses": "zmdi zmdi-linkedin",
 			},
-			{
-				"name": "Facebook",
-				"link": "https://www.facebook.com/gky.aspera",
-				"linkText": "facebook.com/gky.aspera",
-				"iconClasses": "zmdi zmdi-facebook",
-			}
 		]
 	},
 	"overview": "Front-end developer with a strong passion for developing inspirational web applications. Experience in different types of languages and frameworks with quick learning capabilities to adapt in different project requirements. Flexible in different working environments, having worked effectively both independently and as a team in an agile development process. Uses skillsets in user experience design, quality assurance, and software development onto each project with the objective of delivering high quality products.",
@@ -35,32 +30,29 @@
 			"name": "Languages",
 			"items":
 			[
-				"Python",
-				"PHP",
 				"JavaScript",
-				"JSON",
 				"HTML5",
 				"CSS3",
+				"AJAX",
 				"SCSS",
-				"XML",
+				"Python",
+				"PHP",
 				"SQL",
+				"JSON",
 			],
 		},
 		{
 			"name": "Frameworks",
 			"items":
 			[
-				"Django",
-				"Laravel",
 				"AngularJS",
 				"React",
-				"Knockout",
 				"jQuery",
+				"Django",
+				"Laravel",
 				"Bootstrap",
-				"MUI CSS",
 				"Gulp",
 				"NodeJS",
-				"UDK",
 			],
 		},
 		{
@@ -97,12 +89,11 @@
 			"name": "Methodologies",
 			"items":
 			[
-				"MVC",
 				"Agile",
 				"Waterfall",
-				"AJAX",
 				"Scrum",
 				"Unit Test",
+				"Responsive Design",
 			],
 		},
 	],
@@ -110,9 +101,9 @@
 	[
 		{
 			"position": "Junior Software Developer",
-			"company": "DHX Studios",
+			"company": "DHX Media",
 			"location": "Vancouver, BC, Canada",
-			"time": "March 2014 - Current",
+			"time": "Mar 2014 - Current",
 			"description": "Develop new web applications from requirements gathering, sprint planning, agile development, rollout to system maintenance to provide the studio with uniquely built systems to suit the needs of marketing, interactive and pipeline. Collaborate with a team of 4 - 7 developers to design and architect the structure of the projects to determine the optimal development approach and best technologies to use. Research on external studio management system, Shotgun, to assess the compatibility of Shotgun with daily workflow of the studio. Design custom system, Artemis, to be used on top of Shotgun in order to enhance the features provided and tailor it to the needs of the users. Develop and implement different APIs to upgrade legacy systems to use a unified database while planning for future systems to provide backwards compatibility with the past systems.",
 			"points":
 			[
@@ -139,10 +130,10 @@
 			"company": "Electronic Arts Canada",
 			"location": "Burnaby, BC, Canada",
 			"time": "Jun 2008 - Sep 2011",
-			"description": "Tested gaming software for Nintendo Wii, Xbox 360 and PlayStation 3 to ensure the quality of the company’s product, allowing successful first-time passes on several first-party certifications. Specialized in Nintendo compliance and created compliance test cases for EA SPORTS Active and EA SPORTS Active More Workouts using DevTest to guide compliance testers during development process. Collaborated with project managers, team leads and other testers to analyze the coverage and risks of each test suite, ensuring that the requirements of the software was met while validating the stability of each build as the project progressed.",
+			"description": "Tested gaming software for Nintendo Wii, Xbox 360 and PlayStation 3 to ensure the quality of the company's product, allowing successful first-time passes on several first-party certifications. Specialized in Nintendo compliance and created compliance test cases for EA SPORTS Active and EA SPORTS Active More Workouts using DevTest to guide compliance testers during development process. Collaborated with project managers, team leads and other testers to analyze the coverage and risks of each test suite, ensuring that the requirements of the software was met while validating the stability of each build as the project progressed.",
 			"points":
 			[
-				"Tested gaming software for Nintendo Wii, Xbox 360 and PlayStation 3 to ensure the quality of the company’s product, allowing successful first-time passes on several first-party certifications.",
+				"Tested gaming software for Nintendo Wii, Xbox 360 and PlayStation 3 to ensure the quality of the company's product, allowing successful first-time passes on several first-party certifications.",
 				"Specialized in Nintendo compliance and created compliance test cases for EA SPORTS Active and EA SPORTS Active More Workouts using DevTest to guide compliance testers during development process.",
 				"Collaborated with project managers, team leads and other testers to analyze the coverage and risks of each test suite, ensuring that the requirements of the software was met while validating the stability of each build as the project progressed.",
 			]
@@ -161,25 +152,25 @@
 	"projects":
 	[
 		{
-			"name": "Artemis/Shotgun",
-			"location": "DHX Studios",
+			"name": "Production Management System",
+			"location": "DHX Media",
 			"roles": ["Scrum Master", "Software Developer", "UX Designer"],
 			"stack": ["Django, AngularJS, HTML, SCSS, MySQL"],
 			"description": "Designed and developed task management system and show breakdown system alongside external system, Shotgun, to integrate Shotgun into studio pipeline while maintaining legacy system features. Developed an API to provide communication between Shotgun and legacy system, allowing corporate departments to continue using legacy system to enter user information while ensure information is passed to Shotgun. Led a team of five developers in an Agile scrum environment, allowing tasks to be completed within deadlines while reporting to Head of Software Department on schedule adjustments.",
 		},
 		{
 			"name": "Muse Client Review",
-			"location": "DHX Studios",
+			"location": "DHX Media",
 			"roles": ["Software Developer"],
 			"stack": ["Django, AngularJS, HTML, SCSS, MySQL"],
 			"description": "Developed an external client review system connected to studio task management system through an API, allowing coordinators to send completed assets and shots for client review. Worked in a team of five developers and a designer in a sprint environment to plan and design the development architecture for the application ensure all requirements were considered in the design.",
 		},
 		{
 			"name": "Nerd Corps Production Sites",
-			"location": "DHX Studios",
+			"location": "DHX Media",
 			"roles": ["Software Developer"],
 			"stack": ["Laravel", "jQuery", "HTML", "SCSS", "MySQL"],
 			"description": "Design and  developed custom Content Management System for studio production sites, providing a way to perform efficient updates to website contents in the future. Developed multiple production websites such as kateandmimmim.ca with multi-browser support and responsive design to provide kids with a fun and interactive location to learn more about the show and receive updates.",
 		}
-	]
+	],
 }

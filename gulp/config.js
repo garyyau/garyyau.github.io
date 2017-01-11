@@ -7,12 +7,12 @@ module.exports.paths = {
 		'css': basePath + 'css/',
 		'js': basePath + 'js/',
 		'scss': basePath + 'scss/',
-		'html': publicPath,
+		'html': basePath,
 	},
 	build: {
-		'base': publicPath,
+		'base': basePath,
 		'css': publicPath + 'css/',
 		'js': publicPath + 'js/',
-		'html': publicPath,
+		'html': basePath,
 	},
 };

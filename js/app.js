@@ -11,6 +11,7 @@ function LayoutController($scope) {
 	$scope.getProfileElementsDisplay = getProfileElementsDisplay;
 	$scope.getProjectRolesDisplay = getProjectRolesDisplay;
 	$scope.getProjectStackDisplay = getProjectStackDisplay;
+	$scope.getCoverLetterPieces = getCoverLetterPieces;
 
 
 	function getProfileElementsDisplay(profile) {
@@ -23,6 +24,12 @@ function LayoutController($scope) {
 
 	function getProjectStackDisplay(project) {
 		return _.join(project.stack, ', ');
+	}
+
+	function getCoverLetterPieces() {
+		var letter = data.coverLetter.content;
+		var pieces = _.split(letter, '\n');
+		return pieces;
 	}
 }
 
