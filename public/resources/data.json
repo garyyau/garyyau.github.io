@@ -23,7 +23,7 @@
 			},
 		]
 	},
-	"overview": "Front-end developer with a strong passion for developing inspirational web applications. Experience in different types of languages and frameworks with quick learning capabilities to adapt in different project requirements. Flexible in different working environments, having worked effectively both independently and as a team in an agile development process. Uses skillsets in user experience design, quality assurance, and software development onto each project with the objective of delivering high quality products.",
+	"overview": "Frontend developer with a strong passion for developing inspirational web applications. Experience in different types of languages and frameworks with quick learning capabilities to adapt in different project requirements. Flexible in different working environments, having worked effectively both independently and as a team in an agile development process. Uses skillsets in user experience design, quality assurance, and software development onto each project with the objective of delivering high quality products.",
 	"technicalProfile":
 	[
 		{
@@ -34,7 +34,7 @@
 				"HTML5",
 				"CSS3",
 				"AJAX",
-				"SCSS",
+				"SASS",
 				"Python",
 				"PHP",
 				"SQL",
@@ -46,7 +46,6 @@
 			"items":
 			[
 				"AngularJS",
-				"React",
 				"jQuery",
 				"Django",
 				"Laravel",
@@ -78,10 +77,10 @@
 			"name": "Design Tools",
 			"items":
 			[
+				"Sketch",
 				"Adobe Photoshop",
 				"Illustrator",
-				"Dreamweaver",
-				"Premiere Pro",
+				"InVision",
 				"myBalsamiq",
 			],
 		},
@@ -90,7 +89,6 @@
 			"items":
 			[
 				"Agile",
-				"Waterfall",
 				"Scrum",
 				"Unit Test",
 				"Responsive Design",
@@ -100,10 +98,24 @@
 	"workExperience":
 	[
 		{
+			"position": "Intermediate Frontend Developer",
+			"company": "Appnovation Technologies",
+			"location": "Vancouver, BC, Canada",
+			"time": "May 2016 - Current",
+			"description": "Develop new PaaS web application to provide internal services and large clients an easy workflow for web site development and deployment. Built front end web pages in AngularJS, SASS and HTML based on designer mockups, consuming a REST API for communication with backend servers. Integrate a custom support portal web application with external ConnectWise ticketing service for an user friendly client facing portal. Designed wireframes and mockups through requirement meetings and design review meetings with clients to provide an intuitive user interface design for client's safety web application.",
+			"points":
+			[
+				"Develop new PaaS web application to provide internal services and large clients an easy workflow for website development and deployment.",
+				"Built front end web pages in AngularJS, SASS and HTML based on designer mockups, consuming a REST API for communication with backend servers.",
+				"Integrate a custom support portal web application with external ConnectWise ticketing service for an user friendly client facing portal.",
+				"Designed wireframes and mockups through requirement meetings and design review meetings with clients to provide an intuitive user interface design for client's safety web application.",
+			]
+		},
+		{
 			"position": "Junior Software Developer",
 			"company": "DHX Media",
 			"location": "Vancouver, BC, Canada",
-			"time": "Mar 2014 - Current",
+			"time": "Mar 2014 - Apr 2016",
 			"description": "Develop new web applications from requirements gathering, sprint planning, agile development, rollout to system maintenance to provide the studio with uniquely built systems to suit the needs of marketing, interactive and pipeline. Collaborate with a team of 4 - 7 developers to design and architect the structure of the projects to determine the optimal development approach and best technologies to use. Research on external studio management system, Shotgun, to assess the compatibility of Shotgun with daily workflow of the studio. Design custom system, Artemis, to be used on top of Shotgun in order to enhance the features provided and tailor it to the needs of the users. Develop and implement different APIs to upgrade legacy systems to use a unified database while planning for future systems to provide backwards compatibility with the past systems.",
 			"points":
 			[
@@ -111,18 +123,6 @@
 				"Collaborate with a team of 4 - 7 developers to design and architect the structure of the projects to determine the optimal development approach and best technologies to use.",
 				"Research on external studio management system, Shotgun, to assess the compatibility of Shotgun with daily workflow of the studio. Design custom system, Artemis, to be used on top of Shotgun in order to enhance the features provided and tailor it to the needs of the users.",
 				"Develop and implement different APIs to upgrade legacy systems to use a unified database while planning for future systems to provide backwards compatibility with the past systems.",
-			]
-		},
-		{
-			"position": "Junior Application Developer Co-op",
-			"company": "ZE PowerGroup Inc.",
-			"location": "Richmond, BC, Canada",
-			"time": "Jan 2013 - May 2013",
-			"description": "Developed a JavaScript plugin for Selenium IDE to provide QA team with a better understanding of how to create and manage Selenium automation scripts. Developed over 300 automation test scripts using Selenium IDE and XPATH, allowing QA to run scripts during daily implementations to ensure quality over added or modified functionality of the project.",
-			"points":
-			[
-				"Developed a JavaScript plugin for Selenium IDE to provide QA team with a better understanding of how to create and manage Selenium automation scripts.",
-				"Developed over 300 automation test scripts using Selenium IDE and XPATH, allowing QA to run scripts during daily implementations to ensure quality over added or modified functionality of the project.",
 			]
 		},
 		{
@@ -173,4 +173,7 @@
 			"description": "Design and  developed custom Content Management System for studio production sites, providing a way to perform efficient updates to website contents in the future. Developed multiple production websites such as kateandmimmim.ca with multi-browser support and responsive design to provide kids with a fun and interactive location to learn more about the show and receive updates.",
 		}
 	],
+	"coverLetter": {
+		"content": ""
+	}
 }
