@@ -46,11 +46,11 @@
 			"items":
 			[
 				"AngularJS",
+				"React",
+				"Redux",
 				"jQuery",
 				"Django",
 				"Laravel",
-				"Bootstrap",
-				"Gulp",
 				"NodeJS",
 			],
 		},
@@ -98,11 +98,11 @@
 	"workExperience":
 	[
 		{
-			"position": "Intermediate Frontend Developer",
+			"position": "Intermediate Frontend Developer/Scrum Master",
 			"company": "Appnovation Technologies",
 			"location": "Vancouver, BC, Canada",
 			"time": "May 2016 - Current",
-			"description": "Develop new PaaS web application to provide internal services and large clients an easy workflow for web site development and deployment. Built front end web pages in AngularJS, SASS and HTML based on designer mockups, consuming a REST API for communication with backend servers. Integrate a custom support portal web application with external ConnectWise ticketing service for an user friendly client facing portal. Designed wireframes and mockups through requirement meetings and design review meetings with clients to provide an intuitive user interface design for client's safety web application.",
+			"description": "Develop new PaaS web application to provide internal services and large clients an easy workflow for web site development and deployment. Built front end web pages in AngularJS, SASS and HTML based on designer mockups, consuming a REST API for communication with backend servers. Integrate a custom support portal web application with external ConnectWise ticketing service for an user friendly client facing portal. Designed wireframes and mockups through requirement meetings and design review meetings with clients to provide an intuitive user interface design for client's safety web application. Managed a team of four developers through sprints in an Agile development environment.",
 			"points":
 			[
 				"Develop new PaaS web application to provide internal services and large clients an easy workflow for website development and deployment.",
