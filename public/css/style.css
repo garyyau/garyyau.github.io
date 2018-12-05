@@ -372,7 +372,7 @@ th {
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: Arial, Verdana, Tahoma;
@@ -1469,14 +1469,6 @@ th {
   .mui-textfield > textarea:read-only {
     cursor: not-allowed;
     background-color: transparent;
-    opacity: 1; }
-  .mui-textfield > input::-webkit-input-placeholder,
-  .mui-textfield > textarea::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.26);
-    opacity: 1; }
-  .mui-textfield > input::-moz-placeholder,
-  .mui-textfield > textarea::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.26);
     opacity: 1; }
   .mui-textfield > input:-ms-input-placeholder,
   .mui-textfield > textarea:-ms-input-placeholder {
