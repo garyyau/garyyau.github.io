@@ -1,22 +1,22 @@
 export interface WorkExperience {
-	company: string;
-	location: string;
 	startDate: string;
 	endDate?: string;
+	company: string;
+	location: string;
 	positions: {
 		title: string;
-		achievements: string[];
+		descriptions: string[];
 		startDate?: string;
 		endDate?: string;
 	}[];
 }
 
 export interface Project {
-	title: string;
+	date: string;
 	company: string;
-	description: string;
-	positions: string[];
-	technologies: string[];
+	name: string;
+	descriptions: string[];
+	technologies?: string[];
 }
 
 export interface Resume {

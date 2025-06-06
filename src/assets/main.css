@@ -24,7 +24,7 @@ h3 {
 }
 
 h4 {
-	@apply font-semibold;
+	@apply text-[14px] font-semibold;
 }
 
 @utility border-b-section {

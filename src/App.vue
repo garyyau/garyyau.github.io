@@ -49,8 +49,10 @@
 								v-for="position in exp.positions"
 								:key="position.title"
 							>
-								<div class="flex gap-x-[5px]">
-									<h4 class="text-primary mb-[4px]">
+								<div
+									class="mb-[4px] flex items-center gap-x-[5px]"
+								>
+									<h4 class="text-primary">
 										{{ position.title }}
 									</h4>
 
@@ -65,10 +67,10 @@
 
 								<ul class="list-disc ps-[20px]">
 									<li
-										v-for="achievement in position.achievements"
-										:key="achievement"
+										v-for="description in position.descriptions"
+										:key="description"
 									>
-										{{ achievement }}
+										{{ description }}
 									</li>
 								</ul>
 							</div>
@@ -88,25 +90,37 @@
 			>
 				<template v-for="(proj, index) in data.projects" :key="index">
 					<div class="font-semibold">
-						{{ proj.company }}
+						{{ proj.date }}
 					</div>
 
 					<div>
 						<div class="font-semibold">
-							{{ proj.positions.join(', ') }}
+							{{ proj.company }}
 						</div>
 
 						<div class="flex flex-col">
-							<div class="mb-[4px] flex gap-x-[5px]">
+							<div class="mb-[4px] flex items-center gap-x-[5px]">
 								<h4 class="text-primary">
-									{{ proj.title }}
+									{{ proj.name }}
 								</h4>
 							</div>
 
-							<div class="mb-[8px]">{{ proj.description }}</div>
+							<div class="mb-[8px]">
+								<ul class="list-disc ps-[20px]">
+									<li
+										v-for="description in proj.descriptions"
+										:key="description"
+									>
+										{{ description }}
+									</li>
+								</ul>
+							</div>
 
-							<div class="italic text-gray-600">
-								Tech Stack: {{ proj.technologies.join(', ') }}
+							<div
+								v-if="proj.technologies"
+								class="italic text-gray-600"
+							>
+								Technologies: {{ proj.technologies.join(', ') }}
 							</div>
 						</div>
 					</div>
