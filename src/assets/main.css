@@ -12,11 +12,11 @@ body {
 }
 
 h1 {
-	@apply text-[32px] font-bold leading-none;
+	@apply text-[32px] leading-none font-bold;
 }
 
 h2 {
-	@apply text-[20px] font-semibold leading-none;
+	@apply text-[20px] leading-none font-semibold;
 }
 
 h3 {
@@ -29,4 +29,11 @@ h4 {
 
 @utility border-b-section {
 	@apply mb-[16px] border-b border-black pb-[8px];
+}
+
+@media print {
+	@page {
+		margin: 0;
+		size: A4;
+	}
 }

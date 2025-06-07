@@ -6,10 +6,9 @@ export const data: Resume = {
 		title: 'Frontend Web Developer',
 		email: 'gyau88@gmail.com',
 		linkedin: 'linkedin.com/garyyau/',
-		location: 'Vancouver, BC, Canada',
+		location: 'Coquitlam, BC, Canada',
 	},
 	summary: `Frontend developer with strong engineering skills, a sharp eye for design, and a detail-oriented mindset grounded in QA—paired with reliable project coordination and a talent for clear, collaborative communication. I bridge design and engineering, adapt quickly to new tools, and care deeply about creating web experiences that are pixel-perfect and push creative limitations.`,
-
 	experience: [
 		{
 			startDate: 'Jan 2020',
@@ -29,7 +28,7 @@ export const data: Resume = {
 				{
 					title: 'Senior Web Developer',
 					descriptions: [
-						`Led frontend builds from architecture to launch, coordinating junior devs and navigating client feedback to deliver polished, on-time campaign sites.`,
+						`Led frontend builds from architecture to launch, coordinating junior developers and navigating client feedback to deliver polished, on-time campaign sites.`,
 						`Mentored junior developers through code reviews and onboarding, promoting shared patterns and thoughtful problem-solving across the team.`,
 					],
 					startDate: 'Oct 2021',
@@ -38,7 +37,7 @@ export const data: Resume = {
 				{
 					title: 'Web Developer',
 					descriptions: [
-						`Adapted quickly to new frameworks like Vue 2 and Tailwind, contributing to dozens of fast-paced client projects with a strong focus on design fidelity and code quality.`,
+						`Adapted quickly to new frameworks such as Vue 2 and Tailwind, contributing to numerous fast-paced client projects with a strong focus on design fidelity and code quality`,
 						`Collaborated with designers and clients to deliver standout digital experiences—most notably Spirit Bonds, the first-ever interactive visual novel within the League of Legends client.`,
 					],
 					startDate: 'Jan 2020',
@@ -55,9 +54,9 @@ export const data: Resume = {
 				{
 					title: 'Senior Frontend Developer',
 					descriptions: [
-						`Prototyped with different frameworks to push their creative limits and figure out what's technically possible.`,
+						`Prototyped with different frameworks to push their creative limits and assess technical possibilities.`,
 						`Collaborated with designers to bring standout digital experiences to life, updating both the look and the underlying tech for clients.`,
-						`Quickly picked up tools like Facebook AR and Prismic CMS to tailor each build to the needs of the project.`,
+						`Readily adopted  tools such as Facebook AR and Prismic CMS to tailor each build to project requirements.`,
 					],
 				},
 			],
@@ -129,4 +128,10 @@ export const data: Resume = {
 			technologies: ['Vue 2', 'TypeScript', 'TailwindCSS'],
 		},
 	],
+	education: {
+		school: 'Simon Fraser University',
+		location: 'Vancouver, BC',
+		degree: 'Bachelor of Science - Computer Science',
+		date: 'Dec 2013',
+	},
 };

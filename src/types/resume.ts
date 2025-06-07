@@ -30,4 +30,10 @@ export interface Resume {
 	summary: string;
 	experience: WorkExperience[];
 	projects: Project[];
+	education: {
+		school: string;
+		location: string;
+		degree: string;
+		date: string;
+	};
 }

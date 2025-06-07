@@ -1,13 +1,13 @@
 <template>
 	<div
-		class="shadow-glow aspect-a4 border-primary relative mx-auto mt-[20px] flex w-[90lvw] max-w-[880px] flex-col gap-y-[15px] border-l-[18px] px-[80px] py-[50px] [--left-col-width:130px]"
+		class="relative mx-auto my-[20px] flex w-[90lvw] max-w-[880px] flex-col gap-y-[15px] border-l-[18px] border-primary px-[80px] py-[50px] shadow-glow [--left-col-width:130px] print:m-0 print:w-full print:max-w-none print:shadow-none"
 	>
 		<div>
-			<h1 class="text-primary mb-[10px]">
+			<h1 class="mb-[10px] text-primary">
 				{{ data.personalInfo.name }}
 			</h1>
 
-			<h2 class="text-primary mb-[5px]">
+			<h2 class="mb-[5px] text-primary">
 				{{ data.personalInfo.title }}
 			</h2>
 
@@ -58,7 +58,7 @@
 
 									<div
 										v-if="position.startDate"
-										class="italic text-gray-600"
+										class="text-gray-600 italic"
 									>
 										({{ position.startDate }} -
 										{{ position.endDate ?? 'Present' }})
@@ -118,13 +118,41 @@
 
 							<div
 								v-if="proj.technologies"
-								class="italic text-gray-600"
+								class="text-gray-600 italic"
 							>
 								Technologies: {{ proj.technologies.join(', ') }}
 							</div>
 						</div>
 					</div>
 				</template>
+			</div>
+		</div>
+
+		<div>
+			<h3 class="border-b-section border-primary text-primary">
+				Education
+			</h3>
+
+			<div
+				class="grid grid-cols-[var(--left-col-width)_1fr] gap-x-[25px] gap-y-[10px]"
+			>
+				<div>
+					<div class="font-semibold">
+						{{ data.education.date }}
+					</div>
+
+					<div>{{ data.education.location }}</div>
+				</div>
+
+				<div>
+					<div class="font-semibold">
+						{{ data.education.school }}
+					</div>
+
+					<h4 class="text-primary">
+						{{ data.education.degree }}
+					</h4>
+				</div>
 			</div>
 		</div>
 	</div>
