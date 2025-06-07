@@ -15,5 +15,5 @@
 	],
 	"importOrder": ["^vue", "^react", "^[./]", "^[^./]"],
 	"importOrderParserPlugins": ["typescript", "decorators"],
-	"tailwindStylesheet": "../src/assets/main.css"
+	"tailwindStylesheet": "./src/assets/main.css"
 }
