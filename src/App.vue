@@ -1,21 +1,27 @@
 <template>
 	<div
-		class="relative mx-auto my-[20px] flex w-[90lvw] max-w-[880px] flex-col gap-y-[15px] border-l-[18px] border-primary px-[80px] py-[50px] shadow-glow [--left-col-width:130px] print:m-0 print:w-full print:max-w-none print:shadow-none"
+		class="relative m-0 flex w-full ph-max-w-[880px] flex-col ph-gap-y-[15px] border-primary ph-py-[25px] ph-px-[40px] [--left-col-width:20%] ph-border-l-[18px] lg:mx-auto lg:ph-my-[20px] lg:w-[90lvw] lg:ph-py-[50px] lg:ph-px-[80px] lg:shadow-glow print:m-0 print:w-full print:max-w-none print:ph-py-[10px] print:ph-px-[20px] print:shadow-none"
 	>
 		<div>
-			<h1 class="mb-[10px] text-primary">
+			<h1 class="ph-mb-[10px] text-primary">
 				{{ data.personalInfo.name }}
 			</h1>
 
-			<h2 class="mb-[5px] text-primary">
+			<h2 class="ph-mb-[10px] text-primary lg-print:ph-mb-[5px]">
 				{{ data.personalInfo.title }}
 			</h2>
 
-			<div class="flex items-center gap-x-[6px] text-[12px]">
+			<div
+				class="flex flex-col items-start justify-center ph-gap-x-[6px] ph-gap-y-[2px] ph-text-[12px] lg-print:flex-row lg-print:items-center lg-print:justify-start lg-print:ph-gap-y-[0px]"
+			>
 				<div>{{ data.personalInfo.location }}</div>
-				&bull;
+
+				<span class="hidden lg-print:inline">&bull;</span>
+
 				<div>{{ data.personalInfo.email }}</div>
-				&bull;
+
+				<span class="hidden lg-print:inline">&bull;</span>
+
 				<div>{{ data.personalInfo.linkedin }}</div>
 			</div>
 		</div>
@@ -24,16 +30,16 @@
 			{{ data.summary }}
 		</div>
 
-		<div class="_mt-[35px]">
+		<div>
 			<h3 class="border-b-section border-primary text-primary">
 				Work Experience
 			</h3>
 
-			<div
-				class="grid grid-cols-[var(--left-col-width)_1fr] gap-x-[25px] gap-y-[10px]"
-			>
+			<div class="grid-content">
 				<template v-for="(exp, index) in data.experience" :key="index">
-					<div>
+					<div
+						class="flex flex-row ph-gap-x-[10px] lg-print:flex-col"
+					>
 						<div class="font-semibold">
 							{{ exp.startDate }} - {{ exp.endDate ?? 'Present' }}
 						</div>
@@ -44,13 +50,13 @@
 					<div>
 						<div class="font-semibold">{{ exp.company }}</div>
 
-						<div class="flex flex-col gap-y-[10px]">
+						<div class="flex flex-col ph-gap-y-[10px]">
 							<div
 								v-for="position in exp.positions"
 								:key="position.title"
 							>
 								<div
-									class="mb-[4px] flex items-center gap-x-[5px]"
+									class="ph-mb-[4px] flex items-center ph-gap-x-[5px]"
 								>
 									<h4 class="text-primary">
 										{{ position.title }}
@@ -65,7 +71,7 @@
 									</div>
 								</div>
 
-								<ul class="list-disc ps-[20px]">
+								<ul class="list-disc ph-ps-[20px]">
 									<li
 										v-for="description in position.descriptions"
 										:key="description"
@@ -85,9 +91,7 @@
 				Projects
 			</h3>
 
-			<div
-				class="grid grid-cols-[var(--left-col-width)_1fr] gap-x-[25px] gap-y-[10px]"
-			>
+			<div class="grid-content">
 				<template v-for="(proj, index) in data.projects" :key="index">
 					<div class="font-semibold">
 						{{ proj.date }}
@@ -99,14 +103,16 @@
 						</div>
 
 						<div class="flex flex-col">
-							<div class="mb-[4px] flex items-center gap-x-[5px]">
+							<div
+								class="ph-mb-[4px] flex items-center ph-gap-x-[5px]"
+							>
 								<h4 class="text-primary">
 									{{ proj.name }}
 								</h4>
 							</div>
 
-							<div class="mb-[8px]">
-								<ul class="list-disc ps-[20px]">
+							<div class="ph-mb-[8px]">
+								<ul class="list-disc ph-ps-[20px]">
 									<li
 										v-for="description in proj.descriptions"
 										:key="description"
@@ -133,10 +139,8 @@
 				Education
 			</h3>
 
-			<div
-				class="grid grid-cols-[var(--left-col-width)_1fr] gap-x-[25px] gap-y-[10px]"
-			>
-				<div>
+			<div class="grid-content">
+				<div class="flex flex-row ph-gap-x-[10px] lg-print:flex-col">
 					<div class="font-semibold">
 						{{ data.education.date }}
 					</div>

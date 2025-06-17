@@ -108,7 +108,7 @@ export const data: Resume = {
 			technologies: ['Vue 2', 'TypeScript', 'TailwindCSS'],
 		},
 		{
-			date: '',
+			date: 'Aug 2023',
 			company: 'BOND x Riot Games',
 			name: 'Briar Teaser Embed',
 			descriptions: [
