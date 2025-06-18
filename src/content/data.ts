@@ -5,7 +5,7 @@ export const data: Resume = {
 		name: 'Gary Yau',
 		title: 'Frontend Web Developer',
 		email: 'gyau88@gmail.com',
-		linkedin: 'linkedin.com/garyyau/',
+		linkedin: 'linkedin.com/in/garyyau/',
 		location: 'Coquitlam, BC, Canada',
 	},
 	summary: `Frontend developer with strong engineering skills, a sharp eye for design, and a detail-oriented mindset grounded in QA—paired with reliable project coordination and a talent for clear, collaborative communication. I bridge design and engineering, adapt quickly to new tools, and care deeply about creating web experiences that are pixel-perfect and push creative limitations.`,
@@ -30,6 +30,7 @@ export const data: Resume = {
 					descriptions: [
 						`Led frontend builds from architecture to launch, coordinating junior developers and navigating client feedback to deliver polished, on-time campaign sites.`,
 						`Mentored junior developers through code reviews and onboarding, promoting shared patterns and thoughtful problem-solving across the team.`,
+						`Fostered long-term client relationships by communicating technical decisions clearly and delivering consistently strong results across diverse project scopes.`,
 					],
 					startDate: 'Oct 2021',
 					endDate: 'Apr 2023',
@@ -55,46 +56,30 @@ export const data: Resume = {
 					title: 'Senior Frontend Developer',
 					descriptions: [
 						`Prototyped with different frameworks to push their creative limits and assess technical possibilities.`,
+						`Used GSAP and SVGs to build motion-rich microsites, exploring animation techniques that enhanced interactivity and visual storytelling.`,
 						`Collaborated with designers to bring standout digital experiences to life, updating both the look and the underlying tech for clients.`,
-						`Readily adopted  tools such as Facebook AR and Prismic CMS to tailor each build to project requirements.`,
+						`Readily adopted tools such as Facebook AR and Prismic CMS to tailor each build to project requirements.`,
 					],
 				},
 			],
 		},
-		// {
-		// 	startDate: 'May 2016',
-		// 	endDate: 'Mar 2018',
-		// 	location: 'Vancouver, BC',
-		// 	company: 'Appnovation Technologies',
-		// 	positions: [
-		// 		{
-		// 			title: 'Intermediate Frontend Developer/Scrum Master',
-		// 			descriptions: [
-		// 				'Develop new PaaS web application to provide internal services and large clients an easy workflow for website development and deployment.',
-		// 				'Built front end web pages in AngularJS, SASS and HTML based on designer mockups, consuming a REST API for communication with backend servers.',
-		// 				'Integrate a custom support portal web application with external ConnectWise ticketing service for an user friendly client facing portal.',
-		// 				"Designed wireframes and mockups through requirement meetings and design review meetings with clients to provide an intuitive user interface design for client's safety web application.",
-		// 			],
-		// 		},
-		// 	],
-		// },
-		// {
-		// 	startDate: 'Mar 2014',
-		// 	endDate: 'Apr 2016',
-		// 	location: 'Vancouver, BC',
-		// 	company: 'DHX Media',
-		// 	positions: [
-		// 		{
-		// 			title: 'Junior Software Developer',
-		// 			descriptions: [
-		// 				'Develop new web applications from requirements gathering, sprint planning, agile development, rollout to system maintenance to provide the studio with uniquely built systems to suit the needs of marketing, interactive and pipeline.',
-		// 				'Collaborate with a team of 4 - 7 developers to design and architect the structure of the projects to determine the optimal development approach and best technologies to use.',
-		// 				'Research on external studio management system, Shotgun, to assess the compatibility of Shotgun with daily workflow of the studio. Design custom system, Artemis, to be used on top of Shotgun in order to enhance the features provided and tailor it to the needs of the users.',
-		// 				'Develop and implement different APIs to upgrade legacy systems to use a unified database while planning for future systems to provide backwards compatibility with the past systems.',
-		// 			],
-		// 		},
-		// 	],
-		// },
+		{
+			startDate: 'May 2016',
+			endDate: 'Mar 2018',
+			location: 'Vancouver, BC',
+			company: 'Appnovation Technologies',
+			positions: [
+				{
+					title: 'Intermediate Frontend Developer/Scrum Master',
+					descriptions: [
+						`Developed a new PaaS web app enabling internal teams and enterprise clients to streamline website creation, deployment, and maintenance workflows.`,
+						`Built frontend interfaces in AngularJS and SASS, translating mockups into responsive pages and integrating with REST APIs to connect backend services.`,
+						`Integrated a custom support portal with the ConnectWise ticketing system, creating a seamless, client-facing tool for streamlined issue tracking.`,
+						`Designed wireframes and UI mockups in close collaboration with clients, translating requirements into intuitive interfaces for a safety-focused web application.`,
+					],
+				},
+			],
+		},
 	],
 	projects: [
 		{
@@ -110,7 +95,7 @@ export const data: Resume = {
 		{
 			date: 'Aug 2023',
 			company: 'BOND x Riot Games',
-			name: 'Briar Teaser Embed',
+			name: 'Briar Release Teaser Embed',
 			descriptions: [
 				`Built a modular component system with two developers to seamlessly link videos based on randomization and player input, creating an interactive teaser that reacted to viewer choices.`,
 				`Helped shape the system’s dynamic logic by aligning technical structure with the client’s creative vision—offering UX-driven input to bring the interactivity to life.`,
@@ -125,7 +110,56 @@ export const data: Resume = {
 				`Engineered a dynamic visual novel experience driven by narrative and creative config files—supporting thousands of scenes and hundreds of assets across a highly customizable story framework.`,
 				`Collaborated with Riot Games creatives to elevate storytelling through animation—using motion backgrounds, expressive transitions, and cinematic scene changes to match the anime-style narratives.`,
 			],
-			technologies: ['Vue 2', 'TypeScript', 'TailwindCSS'],
+			technologies: ['Vue 2', 'TypeScript', 'TailwindCSS', 'GSAP'],
+		},
+		{
+			date: 'Jun 2021',
+			company: 'BOND x Riot Games',
+			name: 'Teamfight Tactics Skyglass Origins',
+			descriptions: [
+				`Built the first-ever in-client hub for Teamfight Tactics, creating a mission-driven engine that rewarded player progression through interactive states.`,
+				`Implemented video-based UI transitions, giving creatives fine-grained control over animations and deepening player immersion throughout the hub experience.`,
+			],
+			technologies: ['Vue 2', 'TypeScript', 'TailwindCSS', 'GSAP'],
+		},
+	],
+	capabilities: [
+		{
+			name: 'Development',
+			list: [
+				'TypeScript',
+				'JavaScript',
+				'Vue 2 & 3',
+				'React',
+				'GSAP',
+				'Tailwind CSS',
+				'Git',
+			],
+		},
+		{
+			name: 'Design',
+			list: [
+				'Figma',
+				'Adobe Photoshop',
+				'Adobe Illustrator',
+				'Design Systems',
+			],
+		},
+		{
+			name: 'Project Management',
+			list: ['Jira', 'Asana', 'Notion', 'Google Suite', 'Slack'],
+		},
+		{
+			name: 'Work Vibes',
+			list: [
+				'Reliable',
+				'Organized',
+				'Detail-oriented',
+				'Adaptable',
+				'Design-sensitive',
+				'Collaborative',
+				'Empathetic',
+			],
 		},
 	],
 	education: {

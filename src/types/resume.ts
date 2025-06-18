@@ -19,6 +19,11 @@ export interface Project {
 	technologies?: string[];
 }
 
+export interface Capability {
+	name: string;
+	list: string[];
+}
+
 export interface Resume {
 	personalInfo: {
 		name: string;
@@ -30,6 +35,7 @@ export interface Resume {
 	summary: string;
 	experience: WorkExperience[];
 	projects: Project[];
+	capabilities: Capability[];
 	education: {
 		school: string;
 		location: string;
